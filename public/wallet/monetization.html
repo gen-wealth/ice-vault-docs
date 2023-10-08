@@ -242,26 +242,21 @@
 
         
 
+<h2>Types</h2>
+<ul>
+  
+  <li><a href="#Fee">Fee</a></li>
+  
+</ul>
+
 
 
 <h2>Constants</h2>
 <ul>
   
-  <li><a href="#create_pocket_fee">create_pocket_fee</a></li>
-  
-  <li><a href="#create_wallet_fee">create_wallet_fee</a></li>
-  
-  <li><a href="#mint_pocket_redeemer_token_fee">mint_pocket_redeemer_token_fee</a></li>
-  
-  <li><a href="#mint_wallet_access_token_fee">mint_wallet_access_token_fee</a></li>
-  
-  <li><a href="#postpone_deadline_fee">postpone_deadline_fee</a></li>
-  
-  <li><a href="#redeem_funds_fee">redeem_funds_fee</a></li>
+  <li><a href="#oracle">oracle</a></li>
   
   <li><a href="#treasury">treasury</a></li>
-  
-  <li><a href="#withdraw_funds_fee">withdraw_funds_fee</a></li>
   
 </ul>
 
@@ -270,23 +265,25 @@
 <h2>Functions</h2>
 <ul>
   
+  <li><a href="#create_pocket_fee">create_pocket_fee</a></li>
+  
+  <li><a href="#create_wallet_fee">create_wallet_fee</a></li>
+  
   <li><a href="#fee_asset_name">fee_asset_name</a></li>
-  
-  <li><a href="#fee_create_pocket">fee_create_pocket</a></li>
-  
-  <li><a href="#fee_create_wallet">fee_create_wallet</a></li>
-  
-  <li><a href="#fee_mint_pocket_redeemer_token">fee_mint_pocket_redeemer_token</a></li>
-  
-  <li><a href="#fee_mint_wallet_access_token">fee_mint_wallet_access_token</a></li>
   
   <li><a href="#fee_policy_id">fee_policy_id</a></li>
   
-  <li><a href="#fee_postpone_deadline">fee_postpone_deadline</a></li>
+  <li><a href="#mint_pocket_key_fee">mint_pocket_key_fee</a></li>
   
-  <li><a href="#fee_redeem_funds">fee_redeem_funds</a></li>
+  <li><a href="#mint_wallet_key_fee">mint_wallet_key_fee</a></li>
   
-  <li><a href="#fee_withdraw_funds">fee_withdraw_funds</a></li>
+  <li><a href="#redeem_funds_fee">redeem_funds_fee</a></li>
+  
+  <li><a href="#update_pocket_fee">update_pocket_fee</a></li>
+  
+  <li><a href="#update_wallet_fee">update_wallet_fee</a></li>
+  
+  <li><a href="#withdraw_funds_fee">withdraw_funds_fee</a></li>
   
 </ul>
 
@@ -301,6 +298,57 @@
 
 
 
+<section class="module-members">
+  <h1 id="module-types" class="module-member-kind">
+    <a href="#module-types">Types</a>
+  </h1>
+
+  
+  <div class="member">
+    <div class="member-name">
+      <h2 id="Fee">
+        <a href="#Fee">
+	  Fee
+        </a>
+      </h2>
+      
+      <!-- TODO: support source linking
+      <a class="member-source" alt="View Source" title="View Source" href="#todo">
+        &lt;/&gt;
+      </a>
+      -->
+      
+    </div>
+    <div class="custom-type-constructors">
+      <div class="rendered-markdown"></div>
+      
+      <h3>Constructors</h3>
+      <ul class="constructor-list">
+        
+        <li class="constructor-item">
+          <div class="constructor-row">
+            <svg class="icon icon-box"><use xlink:href="#icon-box"></use></svg>
+            <pre class="constructor-name"><code class="hljs aiken">Fee {
+  create_wallet: Qty,
+  create_pocket: Qty,
+  withdraw_funds: Qty,
+  redeem_funds: Qty,
+  mint_wallet_key: Qty,
+  mint_pocket_key: Qty,
+  update_wallet: Qty,
+  update_pocket: Qty,
+}</code></pre>
+          </div>
+	  
+        </li>
+        
+      </ul>
+      
+    </div>
+  </div>
+  
+</section>
+
 
 
 <section class="module-members">
@@ -311,7 +359,7 @@
   
   <div class="member">
     <div class="member-name">
-      <h2 id="create_pocket_fee"><pre class="hljs language-aiken">create_pocket_fee: Int = 0</pre></h2>
+      <h2 id="oracle"><pre class="hljs language-aiken">oracle: ByteArray = &quot;OraclePKH&quot;</pre></h2>
       
       <!-- TODO: support source linking
       <a class="member-source" alt="View Source" title="View Source" href="#todo">
@@ -320,77 +368,8 @@
       -->
       
     </div>
-    <div class="rendered-markdown"></div>
-  </div>
-  
-  <div class="member">
-    <div class="member-name">
-      <h2 id="create_wallet_fee"><pre class="hljs language-aiken">create_wallet_fee: Int = 0</pre></h2>
-      
-      <!-- TODO: support source linking
-      <a class="member-source" alt="View Source" title="View Source" href="#todo">
-        &lt;/&gt;
-      </a>
-      -->
-      
-    </div>
-    <div class="rendered-markdown"></div>
-  </div>
-  
-  <div class="member">
-    <div class="member-name">
-      <h2 id="mint_pocket_redeemer_token_fee"><pre class="hljs language-aiken">mint_pocket_redeemer_token_fee: Int = 0</pre></h2>
-      
-      <!-- TODO: support source linking
-      <a class="member-source" alt="View Source" title="View Source" href="#todo">
-        &lt;/&gt;
-      </a>
-      -->
-      
-    </div>
-    <div class="rendered-markdown"></div>
-  </div>
-  
-  <div class="member">
-    <div class="member-name">
-      <h2 id="mint_wallet_access_token_fee"><pre class="hljs language-aiken">mint_wallet_access_token_fee: Int = 0</pre></h2>
-      
-      <!-- TODO: support source linking
-      <a class="member-source" alt="View Source" title="View Source" href="#todo">
-        &lt;/&gt;
-      </a>
-      -->
-      
-    </div>
-    <div class="rendered-markdown"></div>
-  </div>
-  
-  <div class="member">
-    <div class="member-name">
-      <h2 id="postpone_deadline_fee"><pre class="hljs language-aiken">postpone_deadline_fee: Int = 0</pre></h2>
-      
-      <!-- TODO: support source linking
-      <a class="member-source" alt="View Source" title="View Source" href="#todo">
-        &lt;/&gt;
-      </a>
-      -->
-      
-    </div>
-    <div class="rendered-markdown"></div>
-  </div>
-  
-  <div class="member">
-    <div class="member-name">
-      <h2 id="redeem_funds_fee"><pre class="hljs language-aiken">redeem_funds_fee: Int = 0</pre></h2>
-      
-      <!-- TODO: support source linking
-      <a class="member-source" alt="View Source" title="View Source" href="#todo">
-        &lt;/&gt;
-      </a>
-      -->
-      
-    </div>
-    <div class="rendered-markdown"></div>
+    <div class="rendered-markdown"><p>This should be the fee oracle (eg. to set fees by exchange rate)</p>
+</div>
   </div>
   
   <div class="member">
@@ -405,23 +384,9 @@
       
     </div>
     <div class="rendered-markdown"><p>This should be the validator hash of the treasury.
-Will also have access to unclaimed funds
+Depending on the user’s consent, may also have access to unclaimed funds
 (after a long period of time of being unclaimed, eg. 10 years)</p>
 </div>
-  </div>
-  
-  <div class="member">
-    <div class="member-name">
-      <h2 id="withdraw_funds_fee"><pre class="hljs language-aiken">withdraw_funds_fee: Int = 0</pre></h2>
-      
-      <!-- TODO: support source linking
-      <a class="member-source" alt="View Source" title="View Source" href="#todo">
-        &lt;/&gt;
-      </a>
-      -->
-      
-    </div>
-    <div class="rendered-markdown"></div>
   </div>
   
 </section>
@@ -435,6 +400,34 @@ Will also have access to unclaimed funds
   
   <div class="member">
     <div class="member-name">
+      <h2 id="create_pocket_fee"><pre class="hljs language-aiken">create_pocket_fee(fee: Fee) -&gt; Value</pre></h2>
+      
+      <!-- TODO: support source linking
+      <a class="member-source" alt="View Source" title="View Source" href="#todo">
+        &lt;/&gt;
+      </a>
+      -->
+      
+    </div>
+    <div class="rendered-markdown"></div>
+  </div>
+  
+  <div class="member">
+    <div class="member-name">
+      <h2 id="create_wallet_fee"><pre class="hljs language-aiken">create_wallet_fee(fee: Fee) -&gt; Value</pre></h2>
+      
+      <!-- TODO: support source linking
+      <a class="member-source" alt="View Source" title="View Source" href="#todo">
+        &lt;/&gt;
+      </a>
+      -->
+      
+    </div>
+    <div class="rendered-markdown"></div>
+  </div>
+  
+  <div class="member">
+    <div class="member-name">
       <h2 id="fee_asset_name"><pre class="hljs language-aiken">fee_asset_name() -&gt; AssetName</pre></h2>
       
       <!-- TODO: support source linking
@@ -444,63 +437,9 @@ Will also have access to unclaimed funds
       -->
       
     </div>
-    <div class="rendered-markdown"></div>
-  </div>
-  
-  <div class="member">
-    <div class="member-name">
-      <h2 id="fee_create_pocket"><pre class="hljs language-aiken">fee_create_pocket() -&gt; Value</pre></h2>
-      
-      <!-- TODO: support source linking
-      <a class="member-source" alt="View Source" title="View Source" href="#todo">
-        &lt;/&gt;
-      </a>
-      -->
-      
-    </div>
-    <div class="rendered-markdown"></div>
-  </div>
-  
-  <div class="member">
-    <div class="member-name">
-      <h2 id="fee_create_wallet"><pre class="hljs language-aiken">fee_create_wallet() -&gt; Value</pre></h2>
-      
-      <!-- TODO: support source linking
-      <a class="member-source" alt="View Source" title="View Source" href="#todo">
-        &lt;/&gt;
-      </a>
-      -->
-      
-    </div>
-    <div class="rendered-markdown"></div>
-  </div>
-  
-  <div class="member">
-    <div class="member-name">
-      <h2 id="fee_mint_pocket_redeemer_token"><pre class="hljs language-aiken">fee_mint_pocket_redeemer_token() -&gt; Value</pre></h2>
-      
-      <!-- TODO: support source linking
-      <a class="member-source" alt="View Source" title="View Source" href="#todo">
-        &lt;/&gt;
-      </a>
-      -->
-      
-    </div>
-    <div class="rendered-markdown"></div>
-  </div>
-  
-  <div class="member">
-    <div class="member-name">
-      <h2 id="fee_mint_wallet_access_token"><pre class="hljs language-aiken">fee_mint_wallet_access_token() -&gt; Value</pre></h2>
-      
-      <!-- TODO: support source linking
-      <a class="member-source" alt="View Source" title="View Source" href="#todo">
-        &lt;/&gt;
-      </a>
-      -->
-      
-    </div>
-    <div class="rendered-markdown"></div>
+    <div class="rendered-markdown"><p>This could be the platform token name.
+Currently it’s ADA</p>
+</div>
   </div>
   
   <div class="member">
@@ -514,12 +453,14 @@ Will also have access to unclaimed funds
       -->
       
     </div>
-    <div class="rendered-markdown"></div>
+    <div class="rendered-markdown"><p>This could be the platform token policy.
+Currently it’s ADA</p>
+</div>
   </div>
   
   <div class="member">
     <div class="member-name">
-      <h2 id="fee_postpone_deadline"><pre class="hljs language-aiken">fee_postpone_deadline() -&gt; Value</pre></h2>
+      <h2 id="mint_pocket_key_fee"><pre class="hljs language-aiken">mint_pocket_key_fee(fee: Fee) -&gt; Value</pre></h2>
       
       <!-- TODO: support source linking
       <a class="member-source" alt="View Source" title="View Source" href="#todo">
@@ -533,7 +474,7 @@ Will also have access to unclaimed funds
   
   <div class="member">
     <div class="member-name">
-      <h2 id="fee_redeem_funds"><pre class="hljs language-aiken">fee_redeem_funds() -&gt; Value</pre></h2>
+      <h2 id="mint_wallet_key_fee"><pre class="hljs language-aiken">mint_wallet_key_fee(fee: Fee) -&gt; Value</pre></h2>
       
       <!-- TODO: support source linking
       <a class="member-source" alt="View Source" title="View Source" href="#todo">
@@ -547,7 +488,49 @@ Will also have access to unclaimed funds
   
   <div class="member">
     <div class="member-name">
-      <h2 id="fee_withdraw_funds"><pre class="hljs language-aiken">fee_withdraw_funds() -&gt; Value</pre></h2>
+      <h2 id="redeem_funds_fee"><pre class="hljs language-aiken">redeem_funds_fee(fee: Fee) -&gt; Value</pre></h2>
+      
+      <!-- TODO: support source linking
+      <a class="member-source" alt="View Source" title="View Source" href="#todo">
+        &lt;/&gt;
+      </a>
+      -->
+      
+    </div>
+    <div class="rendered-markdown"></div>
+  </div>
+  
+  <div class="member">
+    <div class="member-name">
+      <h2 id="update_pocket_fee"><pre class="hljs language-aiken">update_pocket_fee(fee: Fee) -&gt; Value</pre></h2>
+      
+      <!-- TODO: support source linking
+      <a class="member-source" alt="View Source" title="View Source" href="#todo">
+        &lt;/&gt;
+      </a>
+      -->
+      
+    </div>
+    <div class="rendered-markdown"></div>
+  </div>
+  
+  <div class="member">
+    <div class="member-name">
+      <h2 id="update_wallet_fee"><pre class="hljs language-aiken">update_wallet_fee(fee: Fee) -&gt; Value</pre></h2>
+      
+      <!-- TODO: support source linking
+      <a class="member-source" alt="View Source" title="View Source" href="#todo">
+        &lt;/&gt;
+      </a>
+      -->
+      
+    </div>
+    <div class="rendered-markdown"></div>
+  </div>
+  
+  <div class="member">
+    <div class="member-name">
+      <h2 id="withdraw_funds_fee"><pre class="hljs language-aiken">withdraw_funds_fee(fee: Fee) -&gt; Value</pre></h2>
       
       <!-- TODO: support source linking
       <a class="member-source" alt="View Source" title="View Source" href="#todo">
@@ -632,8 +615,8 @@ Will also have access to unclaimed funds
       });
     </script>
     <script src="../js/lunr.min.js?v=1.0.16-alpha"></script>
-    <script src="../js/index.js?v=1696751786"></script>
+    <script src="../js/index.js?v=1696753796"></script>
     <!-- Load the search index using JSONP to avoid CORS issues -->
-    <script src="../search-data.js?v=1696751786"></script>
+    <script src="../search-data.js?v=1696753796"></script>
   </body>
 </html>
