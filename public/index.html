@@ -293,89 +293,106 @@
 
       <main class="content">
         
-<h1>inheritance-wallet</h1>
+<h1>❄️ ice-wallet</h1>
 <p><br/><div align="center">
-&gt;<em>Fifteen men on the dead man’s chest—</em><br/>
-&gt;<em>…Yo-ho-ho, and a bottle of rum!</em><br/>
-&gt;<em>Drink and the devil had done for the rest—</em><br/>
-&gt;<em>…Yo-ho-ho, and a bottle of rum!</em><br/></p>
+&gt;<em>A crypto wallet is secure by design, only you can spend your wallet.</em><br/>
+&gt;<em>But what happens when the unexpected happens, like when you cease to exist.</em><br/>
+&gt;<em>No one can access your wallet, not even your closest ones…</em><br/></p>
+<img src="https://genwealth-sdk.web.app/img/ice-cube.png"/>
 </div><br/>
-<p>This is a dead-man’s switch contract where you can:</p>
+<p>Sharing wallet seed phrase is maybe the first thing that comes to most people’s mind,
+but it involves a huge risk. Anyone who knows your seed phrase will have a full control
+of your wallet! This contract is designed so that you can share your hard earned assets
+to persons, selected by you, only after you passed without comprimising security.</p>
+<p>This contract generates a unique wallet for each user where you can <em>freeze</em> your funds
+and then it will <em>melt</em> when the time comes, which is after a deadline. As long as you
+interact with the wallet, the deadline will be postponed. A person who holds a key
+token will then be able to redeem the funds after the wallet has melted.</p>
+<p>With this contract you can:</p>
 <ul>
-<li>Create Chest</li>
-<li>Add Treasure</li>
-<li>Delay Unlock</li>
-<li>Unlock Chest</li>
-<li>Resend Chest</li>
+<li>Create Wallet</li>
+<li>Create Pocket</li>
+<li>Mint Wallet Key</li>
+<li>Mint Pocket Key</li>
+<li>Update Wallet</li>
+<li>Update Pocket</li>
+<li>Deposit Funds</li>
+<li>Withdraw Funds</li>
+<li>Redeem Funds</li>
 </ul>
-<h2>Create Chest</h2>
-<p>Mints <code>ChestLock</code> and <code>ChestKey</code>(s), a new address will be generated. Send <code>ChestLock</code>
-while depositing initial assets. Keep <code>ChestKey</code> token(s) in your wallet, you will need
-to show it when <code>DelayUnlock</code>.</p>
-<p>Give access for delaying the chest unlocking deadline to anyone by sending them the
-<code>ChestKey</code> token.</p>
-<h2>Add Treasure</h2>
-<p>Anyone can deposit more assets to the chest. Don’t forget to include an arbitrary inline
-datum to be redeemable.</p>
-<h2>Delay Unlock</h2>
-<p>Show the matching <code>ChestKey</code> token to postpone the chest unlocking deadline.</p>
-<h2>Unlock Chest</h2>
-<p>Redeem all assets from the chest when the deadline has passed. You will also receive the
-<code>ChestLock</code> NFT.</p>
-<h2>Resend Chest</h2>
-<p>Resend <code>ChestLock</code> to the chest address. Similar to <code>CreateChest</code> but it is done by
-the chest unlocker. There is no real benefit to do this, but it’s possible.</p>
+<h2>Create Wallet</h2>
+<p>Mints <code>WalletLock</code> and optionally <code>WalletKey</code>s, a new address will be generated.
+Send <code>WalletLock</code> to that newly generated address. Keep <code>WalletKey</code> tokens in your wallet,
+and/or send them to your other wallets. You will need to show the token when doing other
+actions later.</p>
+<h2>Create Pocket</h2>
+<p><strong>TODO</strong>: Explain Pocket!</p>
+<h2>Mint Wallet Key</h2>
+<p><strong>TODO</strong>: Explain Wallet Key in more detail!</p>
+<h2>Mint Pocket Key</h2>
+<p><strong>TODO</strong>: Explain Pocket Key in more detail!</p>
+<h2>Update Wallet</h2>
+<p>Show the <code>WalletKey</code> token to update the wallet metadata.</p>
+<h2>Update Pocket</h2>
+<p>Show the <code>WalletKey</code> token to update a pocket metadata.</p>
+<h2>Deposit Funds</h2>
+<p>Anyone can deposit more assets to the wallet. Don’t forget to include an inline datum
+that points to a valid <code>PocketLock</code> UTxO.</p>
+<h2>Redeem Funds</h2>
+<p>Redeem assets from a certain pocket when the deadline has passed by burning the
+corresponding <code>PocketKey</code> token.</p>
 <hr />
-<h3>Chest Address Sample</h3>
-<p>Updated for <a href="https://github.com/aiken-lang/aiken/releases/tag/v1.0.14-alpha">aiken v1.0.14-alpha</a>:</p>
-<pre><code>addr_test1wze6hmn8spj3lcqrckjmytms0uwm4830zjvdwzqsyrzlusqfhsyck
+<h3>Wallet Address Sample</h3>
+<pre><code>TODO
 </code></pre>
-<p>View it in action on
-<a href="https://preview.cexplorer.io/address/addr_test1wze6hmn8spj3lcqrckjmytms0uwm4830zjvdwzqsyrzlusqfhsyck/tx#data">CExplorer</a>.</p>
+<p>View it in action on TODO.</p>
 <h4>Timeline</h4>
 <ul>
 <li>
-<p><strong>Create Chest</strong><br/>
-<code>https://preview.cexplorer.io/tx/218c1cb8564e1223202b7116d9897d955e493f44776d93b826e698c768a8b1c6</code>
-<br/>Mints <strong>2 ChestKey</strong> tokens. Sends some arbitrary tokens as well.</p>
+<p><strong>Create Wallet</strong><br/>
+TODO</p>
 </li>
 <li>
-<p><strong>Add Treasure</strong><br/>
-<code>https://preview.cexplorer.io/tx/9db99e7b49963bb5f63fbac80030c916b3a8a14e2b829e50cf87555d4f565aa2</code>
-<br/>Put an arbitrary <strong>inline datum</strong> and send some arbitrary tokens.</p>
+<p><strong>Create Pocket</strong><br/>
+TODO</p>
 </li>
 <li>
-<p><strong>Delay Unlock</strong><br/>
-<code>https://preview.cexplorer.io/tx/0970f113f9004b184b72ac25533a5900360252b58d6a9c9b8af5a6245fb470f5</code>
-<br/>Postpone chest unlocking deadline.</p>
+<p><strong>Mint Wallet Key</strong><br/>
+TODO</p>
 </li>
 <li>
-<p><strong>Unlock Chest</strong><br/>
-<code>https://preview.cexplorer.io/tx/ca73a798869583209fe6330519710138bd05b9bdbdca2511442e22f1e18d2709</code>
-<br/>Redeem all assets including <strong>ChestLock</strong> NFT (named as <strong>Dead Man’s Chest</strong>) from the chest.</p>
+<p><strong>Mint Pocket Key</strong><br/>
+TODO</p>
 </li>
 <li>
-<p><strong>Resend Chest</strong><br/>
-<code>https://preview.cexplorer.io/tx/10eead16236bb0c0d7fa1dae9d4c03dffdd8d927f89201449c8dd4f286035da3</code>
-<br/>Resend <strong>ChestLock</strong> to the chest address and some arbitrary tokens.</p>
+<p><strong>Update Wallet</strong><br/>
+TODO</p>
+</li>
+<li>
+<p><strong>Update Pocket</strong><br/>
+TODO</p>
+</li>
+<li>
+<p><strong>Deposit Funds</strong><br/>
+TODO</p>
+</li>
+<li>
+<p><strong>Withdraw Funds</strong><br/>
+TODO</p>
+</li>
+<li>
+<p><strong>Redeem Funds</strong><br/>
+TODO</p>
 </li>
 <li>
 <p><strong>Share Access</strong><br/>
-<code>https://preview.cexplorer.io/tx/b3b9c8d961120f9f7cf173884938877146b641612c5d2bd9c0c14a5f7e21b19b</code>
-<br/>Share <strong>1 ChestKey</strong> token to another address.</p>
+TODO</p>
 </li>
 <li>
-<p><strong>Delay Unlock</strong> (by another address)<br/>
-<code>https://preview.cexplorer.io/tx/f0082d9e75fae24ec0c7ff8668ce4ed7206385afe01d13e215ef80c832dac2d5</code>
-<br/>Using the shared <strong>ChestKey</strong> token.</p>
+<p><strong>Update Wallet</strong> (by another address)<br/>
+TODO</p>
 </li>
 </ul>
-<hr />
-<p><br/><div align="center">
-<img src="https://images5.alphacoders.com/641/641119.jpg"/>
-&gt;<em>But one man of her crew alive,</em><br/>
-&gt;<em>What put to sea with seventy-five.</em><br/></p>
-</div><br/>
 
 
       </main>
@@ -448,8 +465,8 @@ the chest unlocker. There is no real benefit to do this, but it’s possible.</p
       });
     </script>
     <script src="./js/lunr.min.js?v=1.0.16-alpha"></script>
-    <script src="./js/index.js?v=1696785360"></script>
+    <script src="./js/index.js?v=1696790173"></script>
     <!-- Load the search index using JSONP to avoid CORS issues -->
-    <script src="./search-data.js?v=1696785360"></script>
+    <script src="./search-data.js?v=1696790173"></script>
   </body>
 </html>
