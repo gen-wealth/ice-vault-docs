@@ -214,6 +214,12 @@
 	  
 	  </a></li>
         
+	  <li><a href="../tests/deposit_funds.html">
+	  
+	  tests/deposit_funds
+	  
+	  </a></li>
+        
 	  <li><a href="../tests/mint_pocket_key.html">
 	  
 	  tests/mint_pocket_key
@@ -226,9 +232,21 @@
 	  
 	  </a></li>
         
+	  <li><a href="../tests/monetization.html">
+	  
+	  tests/monetization
+	  
+	  </a></li>
+        
 	  <li><a href="../tests/redeem_funds.html">
 	  
 	  <strong>tests/redeem_funds</strong>
+	  
+	  </a></li>
+        
+	  <li><a href="../tests/signature.html">
+	  
+	  tests/signature
 	  
 	  </a></li>
         
@@ -268,6 +286,12 @@
 	  
 	  </a></li>
         
+	  <li><a href="../wallet/extractor.html">
+	  
+	  wallet/extractor
+	  
+	  </a></li>
+        
 	  <li><a href="../wallet/locker.html">
 	  
 	  wallet/locker
@@ -303,7 +327,7 @@
   <a href="#module-name">tests/redeem_funds</a>
 </h1>
 <pre><code>┍━ tests/redeem_funds ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-│ PASS [mem: 7070585, cpu: 4145106363] redeem_funds_positive_case
+│ PASS [mem: 7072687, cpu: 4145878852] redeem_funds_positive_case
 │ ↳ Positive Case
 │ ↳ TxSpend ScriptContext: &quot;d8799fd8799f9fd8799fd8799fd8799f4d506f636b65745f547848617368ff00ffd8799fd8799fd87a9f4e57616c6c65745f41646472657373ffd87a80ffa140a1401a0280de80d87b9fd87b9f4d506f636b65745f506f6c696379ffffd87a80ffffff9fd8799fd8799fd8799f50506f636b65744b65795f547848617368ff00ffd8799fd8799fd8799f4f42656e65666963696172795f504b48ffd87a80ffa240a1401a001e84804d506f636b65745f506f6c696379a14a506f636b65745f4b657901d87980d87a80ffffd8799fd8799fd8799f5157616c6c65744c6f636b5f547848617368ff00ffd8799fd8799fd87a9f4e57616c6c65745f41646472657373ffd87a80ffa240a1401a001e84804d57616c6c65745f506f6c696379a14b57616c6c65745f4c6f636b01d87b9fd8799f4b57616c6c65745f4e616d650ad87a80d87a80ffffd87a80ffffff80a140a1401a001e8480a080a0d8799fd8799fd87a9f14ffd87a80ffd8799fd87b80d87a80ffff9f4f42656e65666963696172795f504b48ffa0a0d8799f40ffffd87a9fd8799fd8799f4d506f636b65745f547848617368ff00ffffff&quot;
 │ ↳ spend.wallet_policy: &quot;4d57616c6c65745f506f6c696379&quot;
@@ -315,7 +339,7 @@
 │ ↳ Wallet UTxO from TxRefIns: &quot;d8799fd8799fd87a9f4e57616c6c65745f41646472657373ffd87a80ffa240a1401a001e84804d57616c6c65745f506f6c696379a14b57616c6c65745f4c6f636b01d87b9fd8799f4b57616c6c65745f4e616d650ad87a80d87a80ffffd87a80ff&quot;
 │ ↳ Wallet Address: &quot;4e57616c6c65745f41646472657373&quot;
 │ ↳ Wallet Datum: &quot;d8799f4b57616c6c65745f4e616d650ad87a80d87a80ff&quot;
-│ PASS [mem: 7086589, cpu: 4159194295] redeem_funds_negative_case_redeem_before_deadline
+│ PASS [mem: 7088391, cpu: 4159897784] redeem_funds_negative_case_redeem_before_deadline
 │ ↳ Negative Case: REDEEM BEFORE DEADLINE
 │ ↳ TxSpend ScriptContext: &quot;d8799fd8799f9fd8799fd8799fd8799f4d506f636b65745f547848617368ff00ffd8799fd8799fd87a9f4e57616c6c65745f41646472657373ffd87a80ffa140a1401a0280de80d87b9fd87b9f4d506f636b65745f506f6c696379ffffd87a80ffffff9fd8799fd8799fd8799f50506f636b65744b65795f547848617368ff00ffd8799fd8799fd8799f4f42656e65666963696172795f504b48ffd87a80ffa240a1401a001e84804d506f636b65745f506f6c696379a14a506f636b65745f4b657902d87980d87a80ffffd8799fd8799fd8799f5157616c6c65744c6f636b5f547848617368ff00ffd8799fd8799fd87a9f4e57616c6c65745f41646472657373ffd87a80ffa240a1401a001e84804d57616c6c65745f506f6c696379a14b57616c6c65745f4c6f636b01d87b9fd8799f4b57616c6c65745f4e616d6505d87a80d87a80ffffd87a80ffffff80a140a1401a001e8480a080a0d8799fd8799fd87a9f01ffd87a80ffd8799fd87b80d87a80ffff9f4f42656e65666963696172795f504b48ffa0a0d8799f40ffffd87a9fd8799fd8799f4d506f636b65745f547848617368ff00ffffff&quot;
 │ ↳ spend.wallet_policy: &quot;4d57616c6c65745f506f6c696379&quot;
@@ -331,7 +355,7 @@
 │ ↳ CurrTime: 1
 │ ↳ Deadline: 5
 │ ↳ redeemed_after_deadline ? False
-│ PASS [mem: 5655181, cpu: 3323283859] redeem_funds_negative_case_mismatch_wallet_lock_policy_id
+│ PASS [mem: 5655183, cpu: 3323573348] redeem_funds_negative_case_mismatch_wallet_lock_policy_id
 │ ↳ Negative Case: MISMATCH WALLET LOCK POLICY ID
 │ ↳ TxSpend ScriptContext: &quot;d8799fd8799f9fd8799fd8799fd8799f4d506f636b65745f547848617368ff00ffd8799fd8799fd87a9f4e57616c6c65745f41646472657373ffd87a80ffa140a1401a0280de80d87b9fd87b9f4d506f636b65745f506f6c696379ffffd87a80ffffff9fd8799fd8799fd8799f50506f636b65744b65795f547848617368ff00ffd8799fd8799fd8799f4f42656e65666963696172795f504b48ffd87a80ffa240a1401a001e84804d506f636b65745f506f6c696379a14a506f636b65745f4b657903d87980d87a80ffffd8799fd8799fd8799f5157616c6c65744c6f636b5f547848617368ff00ffd8799fd8799fd87a9f4e57616c6c65745f41646472657373ffd87a80ffa240a1401a001e84805246616b655f57616c6c65745f506f6c696379a14b57616c6c65745f4c6f636b01d87b9fd8799f4b57616c6c65745f4e616d650ad87a80d87a80ffffd87a80ffffff80a140a1401a001e8480a080a0d8799fd8799fd87a9f14ffd87a80ffd8799fd87b80d87a80ffff9f4f42656e65666963696172795f504b48ffa0a0d8799f40ffffd87a9fd8799fd8799f4d506f636b65745f547848617368ff00ffffff&quot;
 │ ↳ spend.wallet_policy: &quot;4d57616c6c65745f506f6c696379&quot;
@@ -340,7 +364,7 @@
 │ ↳ spend.redeemer: &quot;d87d9fd8799fd8799f0000000000000000ff51456e637279707465645f46656548617368ffff&quot;
 │ ↳ Spending Action / Redeemer: RedeemFunds
 │ ↳ Redeemable UTxO Datum: DepositFunds
-│ PASS [mem: 7122724, cpu: 4173727926] redeem_funds_negative_case_mismatch_pocket_policy_id
+│ PASS [mem: 7124826, cpu: 4174500415] redeem_funds_negative_case_mismatch_pocket_policy_id
 │ ↳ Negative Case: MISMATCH POCKET KEY POLICY ID
 │ ↳ TxSpend ScriptContext: &quot;d8799fd8799f9fd8799fd8799fd8799f4d506f636b65745f547848617368ff00ffd8799fd8799fd87a9f4e57616c6c65745f41646472657373ffd87a80ffa140a1401a0280de80d87b9fd87b9f4d506f636b65745f506f6c696379ffffd87a80ffffff9fd8799fd8799fd8799f50506f636b65744b65795f547848617368ff00ffd8799fd8799fd8799f4f42656e65666963696172795f504b48ffd87a80ffa240a1401a001e84805246616b655f506f636b65745f506f6c696379a14a506f636b65745f4b657904d87980d87a80ffffd8799fd8799fd8799f5157616c6c65744c6f636b5f547848617368ff00ffd8799fd8799fd87a9f4e57616c6c65745f41646472657373ffd87a80ffa240a1401a001e84804d57616c6c65745f506f6c696379a14b57616c6c65745f4c6f636b01d87b9fd8799f4b57616c6c65745f4e616d650ad87a80d87a80ffffd87a80ffffff80a140a1401a001e8480a080a0d8799fd8799fd87a9f14ffd87a80ffd8799fd87b80d87a80ffff9f4f42656e65666963696172795f504b48ffa0a0d8799f40ffffd87a9fd8799fd8799f4d506f636b65745f547848617368ff00ffffff&quot;
 │ ↳ spend.wallet_policy: &quot;4d57616c6c65745f506f6c696379&quot;
@@ -352,8 +376,8 @@
 │ ↳ Wallet UTxO from TxRefIns: &quot;d8799fd8799fd87a9f4e57616c6c65745f41646472657373ffd87a80ffa240a1401a001e84804d57616c6c65745f506f6c696379a14b57616c6c65745f4c6f636b01d87b9fd8799f4b57616c6c65745f4e616d650ad87a80d87a80ffffd87a80ff&quot;
 │ ↳ Wallet Address: &quot;4e57616c6c65745f41646472657373&quot;
 │ ↳ Wallet Datum: &quot;d8799f4b57616c6c65745f4e616d650ad87a80d87a80ff&quot;
-│ ↳ signed_by_pocket_key_token_holder ? False
-│ PASS [mem: 6822322, cpu: 3994467444] redeem_funds_negative_case_does_not_show_pocket_key
+│ ↳ signed_by_key_token_holder ? False
+│ PASS [mem: 6824424, cpu: 3995239933] redeem_funds_negative_case_does_not_show_pocket_key
 │ ↳ Negative Case: DOES NOT SHOW POCKET KEY
 │ ↳ TxSpend ScriptContext: &quot;d8799fd8799f9fd8799fd8799fd8799f4d506f636b65745f547848617368ff00ffd8799fd8799fd87a9f4e57616c6c65745f41646472657373ffd87a80ffa140a1401a0280de80d87b9fd87b9f4d506f636b65745f506f6c696379ffffd87a80ffffff9fd8799fd8799fd8799f50506f636b65744b65795f547848617368ff00ffd8799fd8799fd8799f4f42656e65666963696172795f504b48ffd87a80ffa140a1401a001e8480d87980d87a80ffffd8799fd8799fd8799f5157616c6c65744c6f636b5f547848617368ff00ffd8799fd8799fd87a9f4e57616c6c65745f41646472657373ffd87a80ffa240a1401a001e84804d57616c6c65745f506f6c696379a14b57616c6c65745f4c6f636b01d87b9fd8799f4b57616c6c65745f4e616d650ad87a80d87a80ffffd87a80ffffff80a140a1401a001e8480a080a0d8799fd8799fd87a9f14ffd87a80ffd8799fd87b80d87a80ffff9f4f42656e65666963696172795f504b48ffa0a0d8799f40ffffd87a9fd8799fd8799f4d506f636b65745f547848617368ff00ffffff&quot;
 │ ↳ spend.wallet_policy: &quot;4d57616c6c65745f506f6c696379&quot;
@@ -365,8 +389,8 @@
 │ ↳ Wallet UTxO from TxRefIns: &quot;d8799fd8799fd87a9f4e57616c6c65745f41646472657373ffd87a80ffa240a1401a001e84804d57616c6c65745f506f6c696379a14b57616c6c65745f4c6f636b01d87b9fd8799f4b57616c6c65745f4e616d650ad87a80d87a80ffffd87a80ff&quot;
 │ ↳ Wallet Address: &quot;4e57616c6c65745f41646472657373&quot;
 │ ↳ Wallet Datum: &quot;d8799f4b57616c6c65745f4e616d650ad87a80d87a80ff&quot;
-│ ↳ signed_by_pocket_key_token_holder ? False
-│ PASS [mem: 4295103, cpu: 2530949544] redeem_funds_negative_case_does_not_refer_to_wallet_lock
+│ ↳ signed_by_key_token_holder ? False
+│ PASS [mem: 4295105, cpu: 2531239033] redeem_funds_negative_case_does_not_refer_to_wallet_lock
 │ ↳ Negative Case: DOES NOT REFER TO WALLET LOCK
 │ ↳ TxSpend ScriptContext: &quot;d8799fd8799f9fd8799fd8799fd8799f4d506f636b65745f547848617368ff00ffd8799fd8799fd87a9f4e57616c6c65745f41646472657373ffd87a80ffa140a1401a0280de80d87b9fd87b9f4d506f636b65745f506f6c696379ffffd87a80ffffff9fd8799fd8799fd8799f50506f636b65744b65795f547848617368ff00ffd8799fd8799fd8799f4f42656e65666963696172795f504b48ffd87a80ffa240a1401a001e84804d506f636b65745f506f6c696379a14a506f636b65745f4b657901d87980d87a80ffffff80a140a1401a001e8480a080a0d8799fd8799fd87a9f14ffd87a80ffd8799fd87b80d87a80ffff9f4f42656e65666963696172795f504b48ffa0a0d8799f40ffffd87a9fd8799fd8799f4d506f636b65745f547848617368ff00ffffff&quot;
 │ ↳ spend.wallet_policy: &quot;4d57616c6c65745f506f6c696379&quot;
@@ -375,7 +399,7 @@
 │ ↳ spend.redeemer: &quot;d87d9fd8799fd8799f0000000000000000ff51456e637279707465645f46656548617368ffff&quot;
 │ ↳ Spending Action / Redeemer: RedeemFunds
 │ ↳ Redeemable UTxO Datum: DepositFunds
-│ PASS [mem: 7083854, cpu: 4149825624] redeem_funds_negative_case_refer_to_different_pocket
+│ PASS [mem: 7085956, cpu: 4150598113] redeem_funds_negative_case_refer_to_different_pocket
 │ ↳ Negative Case: REFER TO DIFFERENT POCKET
 │ ↳ TxSpend ScriptContext: &quot;d8799fd8799f9fd8799fd8799fd8799f4d506f636b65745f547848617368ff00ffd8799fd8799fd87a9f4e57616c6c65745f41646472657373ffd87a80ffa140a1401a0280de80d87b9fd87b9f4d57616c6c65745f506f6c696379ffffd87a80ffffff9fd8799fd8799fd8799f50506f636b65744b65795f547848617368ff00ffd8799fd8799fd8799f4f42656e65666963696172795f504b48ffd87a80ffa240a1401a001e84804d506f636b65745f506f6c696379a14a506f636b65745f4b657902d87980d87a80ffffd8799fd8799fd8799f5157616c6c65744c6f636b5f547848617368ff00ffd8799fd8799fd87a9f4e57616c6c65745f41646472657373ffd87a80ffa240a1401a001e84804d57616c6c65745f506f6c696379a14b57616c6c65745f4c6f636b01d87b9fd8799f4b57616c6c65745f4e616d650ad87a80d87a80ffffd87a80ffffff80a140a1401a001e8480a080a0d8799fd8799fd87a9f14ffd87a80ffd8799fd87b80d87a80ffff9f4f42656e65666963696172795f504b48ffa0a0d8799f40ffffd87a9fd8799fd8799f4d506f636b65745f547848617368ff00ffffff&quot;
 │ ↳ spend.wallet_policy: &quot;4d57616c6c65745f506f6c696379&quot;
@@ -387,8 +411,8 @@
 │ ↳ Wallet UTxO from TxRefIns: &quot;d8799fd8799fd87a9f4e57616c6c65745f41646472657373ffd87a80ffa240a1401a001e84804d57616c6c65745f506f6c696379a14b57616c6c65745f4c6f636b01d87b9fd8799f4b57616c6c65745f4e616d650ad87a80d87a80ffffd87a80ff&quot;
 │ ↳ Wallet Address: &quot;4e57616c6c65745f41646472657373&quot;
 │ ↳ Wallet Datum: &quot;d8799f4b57616c6c65745f4e616d650ad87a80d87a80ff&quot;
-│ ↳ signed_by_pocket_key_token_holder ? False
-│ PASS [mem: 6888952, cpu: 4044893426] redeem_funds_negative_case_does_not_sign_the_txn
+│ ↳ signed_by_key_token_holder ? False
+│ PASS [mem: 6891054, cpu: 4045665915] redeem_funds_negative_case_does_not_sign_the_txn
 │ ↳ Negative Case: DOES NOT SIGN THE TXN
 │ ↳ TxSpend ScriptContext: &quot;d8799fd8799f9fd8799fd8799fd8799f4d506f636b65745f547848617368ff00ffd8799fd8799fd87a9f4e57616c6c65745f41646472657373ffd87a80ffa140a1401a0280de80d87b9fd87b9f4d506f636b65745f506f6c696379ffffd87a80ffffff9fd8799fd8799fd8799f50506f636b65744b65795f547848617368ff00ffd8799fd8799fd8799f4f42656e65666963696172795f504b48ffd87a80ffa240a1401a001e84804d506f636b65745f506f6c696379a14a506f636b65745f4b657903d87980d87a80ffffd8799fd8799fd8799f5157616c6c65744c6f636b5f547848617368ff00ffd8799fd8799fd87a9f4e57616c6c65745f41646472657373ffd87a80ffa240a1401a001e84804d57616c6c65745f506f6c696379a14b57616c6c65745f4c6f636b01d87b9fd8799f4b57616c6c65745f4e616d650ad87a80d87a80ffffd87a80ffffff80a140a1401a001e8480a080a0d8799fd8799fd87a9f14ffd87a80ffd8799fd87b80d87a80ffff80a0a0d8799f40ffffd87a9fd8799fd8799f4d506f636b65745f547848617368ff00ffffff&quot;
 │ ↳ spend.wallet_policy: &quot;4d57616c6c65745f506f6c696379&quot;
@@ -400,7 +424,7 @@
 │ ↳ Wallet UTxO from TxRefIns: &quot;d8799fd8799fd87a9f4e57616c6c65745f41646472657373ffd87a80ffa240a1401a001e84804d57616c6c65745f506f6c696379a14b57616c6c65745f4c6f636b01d87b9fd8799f4b57616c6c65745f4e616d650ad87a80d87a80ffffd87a80ff&quot;
 │ ↳ Wallet Address: &quot;4e57616c6c65745f41646472657373&quot;
 │ ↳ Wallet Datum: &quot;d8799f4b57616c6c65745f4e616d650ad87a80d87a80ff&quot;
-│ ↳ signed_by_pocket_key_token_holder ? False
+│ ↳ signed_by_key_token_holder ? False
 ┕━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8 tests | 8 passed | 0 failed
 </code></pre>
 
@@ -481,8 +505,8 @@
       });
     </script>
     <script src="../js/lunr.min.js?v=1.0.19-alpha"></script>
-    <script src="../js/index.js?v=1698346199"></script>
+    <script src="../js/index.js?v=1698762319"></script>
     <!-- Load the search index using JSONP to avoid CORS issues -->
-    <script src="../search-data.js?v=1698346199"></script>
+    <script src="../search-data.js?v=1698762319"></script>
   </body>
 </html>
