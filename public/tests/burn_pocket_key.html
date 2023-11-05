@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>tests/constant - gen-wealth/❄️ice-wallet</title>
+    <title>tests/burn_pocket_key - gen-wealth/❄️ice-wallet</title>
     <meta name="theme-color" content="#eff1f5" media="(prefers-color-scheme: light)"/>
     <meta name="theme-color" content="#1e1e2e" media="(prefers-color-scheme: dark)"/>
     <link rel="icon" type="image/svg+xml" sizes="any" href="../favicon.svg"/>
@@ -198,7 +198,7 @@
         
 	  <li><a href="../tests/burn_pocket_key.html">
 	  
-	  tests/burn_pocket_key
+	  <strong>tests/burn_pocket_key</strong>
 	  
 	  </a></li>
         
@@ -210,7 +210,7 @@
         
 	  <li><a href="../tests/constant.html">
 	  
-	  <strong>tests/constant</strong>
+	  tests/constant
 	  
 	  </a></li>
         
@@ -334,65 +334,7 @@
 
 
 
-<h2>Constants</h2>
-<ul>
-  
-  <li><a href="#beneficiary_pkh">beneficiary_pkh</a></li>
-  
-  <li><a href="#fake_beneficiary_pkh">fake_beneficiary_pkh</a></li>
-  
-  <li><a href="#fake_pocket_policy">fake_pocket_policy</a></li>
-  
-  <li><a href="#fake_wallet_address">fake_wallet_address</a></li>
-  
-  <li><a href="#fake_wallet_creator_pkh">fake_wallet_creator_pkh</a></li>
-  
-  <li><a href="#fake_wallet_policy">fake_wallet_policy</a></li>
-  
-  <li><a href="#new_pocket_name">new_pocket_name</a></li>
-  
-  <li><a href="#new_wallet_name">new_wallet_name</a></li>
-  
-  <li><a href="#pocket_name">pocket_name</a></li>
-  
-  <li><a href="#pocket_policy">pocket_policy</a></li>
-  
-  <li><a href="#wallet_address">wallet_address</a></li>
-  
-  <li><a href="#wallet_creator_pkh">wallet_creator_pkh</a></li>
-  
-  <li><a href="#wallet_name">wallet_name</a></li>
-  
-  <li><a href="#wallet_policy">wallet_policy</a></li>
-  
-</ul>
 
-
-
-<h2>Functions</h2>
-<ul>
-  
-  <li><a href="#create_pocket_utxo_ref">create_pocket_utxo_ref</a></li>
-  
-  <li><a href="#create_wallet_utxo_ref">create_wallet_utxo_ref</a></li>
-  
-  <li><a href="#fee">fee</a></li>
-  
-  <li><a href="#fee_nonce">fee_nonce</a></li>
-  
-  <li><a href="#fee_nonce_tx_in">fee_nonce_tx_in</a></li>
-  
-  <li><a href="#pocket_key">pocket_key</a></li>
-  
-  <li><a href="#pocket_lock">pocket_lock</a></li>
-  
-  <li><a href="#token_names">token_names</a></li>
-  
-  <li><a href="#wallet_key">wallet_key</a></li>
-  
-  <li><a href="#wallet_lock">wallet_lock</a></li>
-  
-</ul>
 
 
       </nav>
@@ -400,365 +342,24 @@
       <main class="content">
         
 <h1 id="module-name" class="module-name">
-  <a href="#module-name">tests/constant</a>
+  <a href="#module-name">tests/burn_pocket_key</a>
 </h1>
+<pre><code>┍━ tests/burn_wallet_key ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+│ PASS [mem: 2193816, cpu: 1276708060] burn_wallet_key
+│ ↳ ScriptContext: &quot;d8799fd8799f808080a140a1401a001e8480a14d57616c6c65745f506f6c696379a14a57616c6c65745f4b65792080a0d8799fd8799fd87b80d87a80ffd8799fd87980d87a80ffff80a0a0d8799f40ffffd8799f4d57616c6c65745f506f6c696379ffff&quot;
+│ ↳ mint_wallet.utxo_ref: &quot;d8799fd8799f5343726561746557616c6c65745f547848617368ff00ff&quot;
+│ ↳ mint_wallet.pkh: &quot;5257616c6c65745f43726561746f725f504b48&quot;
+│ ↳ mint_wallet.token_names: &quot;d8799f4b57616c6c65745f4c6f636b4a57616c6c65745f4b65794b506f636b65745f4c6f636b4a506f636b65745f4b6579ff&quot;
+│ ↳ mint_wallet.redeemer: &quot;d9050280&quot;
+│ ↳ Wallet Burning Action / Redeemer: BurnWalletKey
+┕━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1 tests | 1 passed | 0 failed
+</code></pre>
 
 
 
 
 
-<section class="module-members">
-  <h1 id="module-constants" class="module-member-kind">
-    <a href="#module-constants">Constants</a>
-  </h1>
 
-  
-  <div class="member">
-    <div class="member-name">
-      <h2 id="beneficiary_pkh"><pre class="hljs language-aiken">beneficiary_pkh: ByteArray = &quot;Beneficiary_PKH&quot;</pre></h2>
-      
-      <!-- TODO: support source linking
-      <a class="member-source" alt="View Source" title="View Source" href="#todo">
-        &lt;/&gt;
-      </a>
-      -->
-      
-    </div>
-    <div class="rendered-markdown"></div>
-  </div>
-  
-  <div class="member">
-    <div class="member-name">
-      <h2 id="fake_beneficiary_pkh"><pre class="hljs language-aiken">fake_beneficiary_pkh: ByteArray = &quot;Fake_Beneficiary_PKH&quot;</pre></h2>
-      
-      <!-- TODO: support source linking
-      <a class="member-source" alt="View Source" title="View Source" href="#todo">
-        &lt;/&gt;
-      </a>
-      -->
-      
-    </div>
-    <div class="rendered-markdown"></div>
-  </div>
-  
-  <div class="member">
-    <div class="member-name">
-      <h2 id="fake_pocket_policy"><pre class="hljs language-aiken">fake_pocket_policy: ByteArray = &quot;Fake_Pocket_Policy&quot;</pre></h2>
-      
-      <!-- TODO: support source linking
-      <a class="member-source" alt="View Source" title="View Source" href="#todo">
-        &lt;/&gt;
-      </a>
-      -->
-      
-    </div>
-    <div class="rendered-markdown"></div>
-  </div>
-  
-  <div class="member">
-    <div class="member-name">
-      <h2 id="fake_wallet_address"><pre class="hljs language-aiken">fake_wallet_address: ByteArray = &quot;Fake_Wallet_Address&quot;</pre></h2>
-      
-      <!-- TODO: support source linking
-      <a class="member-source" alt="View Source" title="View Source" href="#todo">
-        &lt;/&gt;
-      </a>
-      -->
-      
-    </div>
-    <div class="rendered-markdown"></div>
-  </div>
-  
-  <div class="member">
-    <div class="member-name">
-      <h2 id="fake_wallet_creator_pkh"><pre class="hljs language-aiken">fake_wallet_creator_pkh: ByteArray = &quot;Fake_Wallet_Creator_PKH&quot;</pre></h2>
-      
-      <!-- TODO: support source linking
-      <a class="member-source" alt="View Source" title="View Source" href="#todo">
-        &lt;/&gt;
-      </a>
-      -->
-      
-    </div>
-    <div class="rendered-markdown"></div>
-  </div>
-  
-  <div class="member">
-    <div class="member-name">
-      <h2 id="fake_wallet_policy"><pre class="hljs language-aiken">fake_wallet_policy: ByteArray = &quot;Fake_Wallet_Policy&quot;</pre></h2>
-      
-      <!-- TODO: support source linking
-      <a class="member-source" alt="View Source" title="View Source" href="#todo">
-        &lt;/&gt;
-      </a>
-      -->
-      
-    </div>
-    <div class="rendered-markdown"></div>
-  </div>
-  
-  <div class="member">
-    <div class="member-name">
-      <h2 id="new_pocket_name"><pre class="hljs language-aiken">new_pocket_name: ByteArray = &quot;New_Pocket_Name&quot;</pre></h2>
-      
-      <!-- TODO: support source linking
-      <a class="member-source" alt="View Source" title="View Source" href="#todo">
-        &lt;/&gt;
-      </a>
-      -->
-      
-    </div>
-    <div class="rendered-markdown"></div>
-  </div>
-  
-  <div class="member">
-    <div class="member-name">
-      <h2 id="new_wallet_name"><pre class="hljs language-aiken">new_wallet_name: ByteArray = &quot;New_Wallet_Name&quot;</pre></h2>
-      
-      <!-- TODO: support source linking
-      <a class="member-source" alt="View Source" title="View Source" href="#todo">
-        &lt;/&gt;
-      </a>
-      -->
-      
-    </div>
-    <div class="rendered-markdown"></div>
-  </div>
-  
-  <div class="member">
-    <div class="member-name">
-      <h2 id="pocket_name"><pre class="hljs language-aiken">pocket_name: ByteArray = &quot;Pocket_Name&quot;</pre></h2>
-      
-      <!-- TODO: support source linking
-      <a class="member-source" alt="View Source" title="View Source" href="#todo">
-        &lt;/&gt;
-      </a>
-      -->
-      
-    </div>
-    <div class="rendered-markdown"></div>
-  </div>
-  
-  <div class="member">
-    <div class="member-name">
-      <h2 id="pocket_policy"><pre class="hljs language-aiken">pocket_policy: ByteArray = &quot;Pocket_Policy&quot;</pre></h2>
-      
-      <!-- TODO: support source linking
-      <a class="member-source" alt="View Source" title="View Source" href="#todo">
-        &lt;/&gt;
-      </a>
-      -->
-      
-    </div>
-    <div class="rendered-markdown"></div>
-  </div>
-  
-  <div class="member">
-    <div class="member-name">
-      <h2 id="wallet_address"><pre class="hljs language-aiken">wallet_address: ByteArray = &quot;Wallet_Address&quot;</pre></h2>
-      
-      <!-- TODO: support source linking
-      <a class="member-source" alt="View Source" title="View Source" href="#todo">
-        &lt;/&gt;
-      </a>
-      -->
-      
-    </div>
-    <div class="rendered-markdown"></div>
-  </div>
-  
-  <div class="member">
-    <div class="member-name">
-      <h2 id="wallet_creator_pkh"><pre class="hljs language-aiken">wallet_creator_pkh: ByteArray = &quot;Wallet_Creator_PKH&quot;</pre></h2>
-      
-      <!-- TODO: support source linking
-      <a class="member-source" alt="View Source" title="View Source" href="#todo">
-        &lt;/&gt;
-      </a>
-      -->
-      
-    </div>
-    <div class="rendered-markdown"></div>
-  </div>
-  
-  <div class="member">
-    <div class="member-name">
-      <h2 id="wallet_name"><pre class="hljs language-aiken">wallet_name: ByteArray = &quot;Wallet_Name&quot;</pre></h2>
-      
-      <!-- TODO: support source linking
-      <a class="member-source" alt="View Source" title="View Source" href="#todo">
-        &lt;/&gt;
-      </a>
-      -->
-      
-    </div>
-    <div class="rendered-markdown"></div>
-  </div>
-  
-  <div class="member">
-    <div class="member-name">
-      <h2 id="wallet_policy"><pre class="hljs language-aiken">wallet_policy: ByteArray = &quot;Wallet_Policy&quot;</pre></h2>
-      
-      <!-- TODO: support source linking
-      <a class="member-source" alt="View Source" title="View Source" href="#todo">
-        &lt;/&gt;
-      </a>
-      -->
-      
-    </div>
-    <div class="rendered-markdown"></div>
-  </div>
-  
-</section>
-
-
-
-<section class="module-members">
-  <h1 id="module-functions" class="module-member-kind">
-    <a href="#module-functions">Functions</a>
-  </h1>
-  
-  <div class="member">
-    <div class="member-name">
-      <h2 id="create_pocket_utxo_ref"><pre class="hljs language-aiken">create_pocket_utxo_ref() -&gt; OutputReference</pre></h2>
-      
-      <!-- TODO: support source linking
-      <a class="member-source" alt="View Source" title="View Source" href="#todo">
-        &lt;/&gt;
-      </a>
-      -->
-      
-    </div>
-    <div class="rendered-markdown"></div>
-  </div>
-  
-  <div class="member">
-    <div class="member-name">
-      <h2 id="create_wallet_utxo_ref"><pre class="hljs language-aiken">create_wallet_utxo_ref() -&gt; OutputReference</pre></h2>
-      
-      <!-- TODO: support source linking
-      <a class="member-source" alt="View Source" title="View Source" href="#todo">
-        &lt;/&gt;
-      </a>
-      -->
-      
-    </div>
-    <div class="rendered-markdown"></div>
-  </div>
-  
-  <div class="member">
-    <div class="member-name">
-      <h2 id="fee"><pre class="hljs language-aiken">fee() -&gt; SignedFee</pre></h2>
-      
-      <!-- TODO: support source linking
-      <a class="member-source" alt="View Source" title="View Source" href="#todo">
-        &lt;/&gt;
-      </a>
-      -->
-      
-    </div>
-    <div class="rendered-markdown"></div>
-  </div>
-  
-  <div class="member">
-    <div class="member-name">
-      <h2 id="fee_nonce"><pre class="hljs language-aiken">fee_nonce() -&gt; OutputReference</pre></h2>
-      
-      <!-- TODO: support source linking
-      <a class="member-source" alt="View Source" title="View Source" href="#todo">
-        &lt;/&gt;
-      </a>
-      -->
-      
-    </div>
-    <div class="rendered-markdown"></div>
-  </div>
-  
-  <div class="member">
-    <div class="member-name">
-      <h2 id="fee_nonce_tx_in"><pre class="hljs language-aiken">fee_nonce_tx_in(address: Address) -&gt; transaction.Input</pre></h2>
-      
-      <!-- TODO: support source linking
-      <a class="member-source" alt="View Source" title="View Source" href="#todo">
-        &lt;/&gt;
-      </a>
-      -->
-      
-    </div>
-    <div class="rendered-markdown"></div>
-  </div>
-  
-  <div class="member">
-    <div class="member-name">
-      <h2 id="pocket_key"><pre class="hljs language-aiken">pocket_key(pocket_policy: PolicyId, qty: Qty) -&gt; Value</pre></h2>
-      
-      <!-- TODO: support source linking
-      <a class="member-source" alt="View Source" title="View Source" href="#todo">
-        &lt;/&gt;
-      </a>
-      -->
-      
-    </div>
-    <div class="rendered-markdown"></div>
-  </div>
-  
-  <div class="member">
-    <div class="member-name">
-      <h2 id="pocket_lock"><pre class="hljs language-aiken">pocket_lock(pocket_policy: PolicyId) -&gt; Value</pre></h2>
-      
-      <!-- TODO: support source linking
-      <a class="member-source" alt="View Source" title="View Source" href="#todo">
-        &lt;/&gt;
-      </a>
-      -->
-      
-    </div>
-    <div class="rendered-markdown"></div>
-  </div>
-  
-  <div class="member">
-    <div class="member-name">
-      <h2 id="token_names"><pre class="hljs language-aiken">token_names() -&gt; TokenNames</pre></h2>
-      
-      <!-- TODO: support source linking
-      <a class="member-source" alt="View Source" title="View Source" href="#todo">
-        &lt;/&gt;
-      </a>
-      -->
-      
-    </div>
-    <div class="rendered-markdown"></div>
-  </div>
-  
-  <div class="member">
-    <div class="member-name">
-      <h2 id="wallet_key"><pre class="hljs language-aiken">wallet_key(wallet_policy: PolicyId, qty: Qty) -&gt; Value</pre></h2>
-      
-      <!-- TODO: support source linking
-      <a class="member-source" alt="View Source" title="View Source" href="#todo">
-        &lt;/&gt;
-      </a>
-      -->
-      
-    </div>
-    <div class="rendered-markdown"></div>
-  </div>
-  
-  <div class="member">
-    <div class="member-name">
-      <h2 id="wallet_lock"><pre class="hljs language-aiken">wallet_lock(wallet_policy: PolicyId) -&gt; Value</pre></h2>
-      
-      <!-- TODO: support source linking
-      <a class="member-source" alt="View Source" title="View Source" href="#todo">
-        &lt;/&gt;
-      </a>
-      -->
-      
-    </div>
-    <div class="rendered-markdown"></div>
-  </div>
-  
-</section>
 
 
       </main>

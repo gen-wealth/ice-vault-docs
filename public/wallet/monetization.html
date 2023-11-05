@@ -196,6 +196,18 @@
 	  
 	  </a></li>
         
+	  <li><a href="../tests/burn_pocket_key.html">
+	  
+	  tests/burn_pocket_key
+	  
+	  </a></li>
+        
+	  <li><a href="../tests/burn_wallet_key.html">
+	  
+	  tests/burn_wallet_key
+	  
+	  </a></li>
+        
 	  <li><a href="../tests/constant.html">
 	  
 	  tests/constant
@@ -211,6 +223,12 @@
 	  <li><a href="../tests/create_wallet.html">
 	  
 	  tests/create_wallet
+	  
+	  </a></li>
+        
+	  <li><a href="../tests/delete_pocket.html">
+	  
+	  tests/delete_pocket
 	  
 	  </a></li>
         
@@ -399,7 +417,8 @@
     </div>
     <div class="custom-type-constructors">
       <div class="rendered-markdown"><ul>
-<li><code>nonce</code> is an arbitrary <code>Data</code> to generate a unique <code>signature</code></li>
+<li><code>nonce</code> is an arbitrary <code>UTxO</code> to generate a unique <code>signature</code>
+(the UTxO must be consumed)</li>
 </ul>
 </div>
       
@@ -410,7 +429,7 @@
           <div class="constructor-row">
             <svg class="icon icon-box"><use xlink:href="#icon-box"></use></svg>
             <pre class="constructor-name"><code class="hljs aiken">Fee {
-  nonce: Data,
+  nonce: OutputReference,
   create_wallet: Qty,
   create_pocket: Qty,
   withdraw_funds: Qty,
@@ -608,7 +627,11 @@ Currently it’s ADA</p>
   
   <div class="member">
     <div class="member-name">
-      <h2 id="paid_fee"><pre class="hljs language-aiken">paid_fee(outputs: List&lt;transaction.Output&gt;, fee: Value) -&gt; Bool</pre></h2>
+      <h2 id="paid_fee"><pre class="hljs language-aiken">paid_fee(
+  outputs: List&lt;transaction.Output&gt;,
+  fee: Value,
+  consumed_nonce: fn() -&gt; Bool,
+) -&gt; Bool</pre></h2>
       
       <!-- TODO: support source linking
       <a class="member-source" alt="View Source" title="View Source" href="#todo">
@@ -763,8 +786,8 @@ Currently it’s ADA</p>
       });
     </script>
     <script src="../js/lunr.min.js?v=1.0.19-alpha"></script>
-    <script src="../js/index.js?v=1698916518"></script>
+    <script src="../js/index.js?v=1699194201"></script>
     <!-- Load the search index using JSONP to avoid CORS issues -->
-    <script src="../search-data.js?v=1698916518"></script>
+    <script src="../search-data.js?v=1699194201"></script>
   </body>
 </html>
