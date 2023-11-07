@@ -357,29 +357,9 @@
 <h2>Functions</h2>
 <ul>
   
-  <li><a href="#create_pocket_fee">create_pocket_fee</a></li>
-  
-  <li><a href="#create_wallet_fee">create_wallet_fee</a></li>
-  
-  <li><a href="#fee_asset_name">fee_asset_name</a></li>
-  
-  <li><a href="#fee_policy_id">fee_policy_id</a></li>
-  
-  <li><a href="#mint_pocket_key_fee">mint_pocket_key_fee</a></li>
-  
-  <li><a href="#mint_wallet_key_fee">mint_wallet_key_fee</a></li>
-  
   <li><a href="#paid_fee">paid_fee</a></li>
   
-  <li><a href="#redeem_funds_fee">redeem_funds_fee</a></li>
-  
-  <li><a href="#update_pocket_fee">update_pocket_fee</a></li>
-  
-  <li><a href="#update_wallet_fee">update_wallet_fee</a></li>
-  
   <li><a href="#verify_fee">verify_fee</a></li>
-  
-  <li><a href="#withdraw_funds_fee">withdraw_funds_fee</a></li>
   
 </ul>
 
@@ -430,14 +410,9 @@
             <svg class="icon icon-box"><use xlink:href="#icon-box"></use></svg>
             <pre class="constructor-name"><code class="hljs aiken">Fee {
   nonce: OutputReference,
-  create_wallet: Qty,
-  create_pocket: Qty,
-  withdraw_funds: Qty,
-  redeem_funds: Qty,
-  mint_wallet_key: Qty,
-  mint_pocket_key: Qty,
-  update_wallet: Qty,
-  update_pocket: Qty,
+  token_policy: PolicyId,
+  token_name: AssetName,
+  amount: Qty,
 }</code></pre>
           </div>
 	  
@@ -539,94 +514,6 @@ Depending on the user’s consent, may also have access to unclaimed funds
   
   <div class="member">
     <div class="member-name">
-      <h2 id="create_pocket_fee"><pre class="hljs language-aiken">create_pocket_fee(fee: Fee) -&gt; Value</pre></h2>
-      
-      <!-- TODO: support source linking
-      <a class="member-source" alt="View Source" title="View Source" href="#todo">
-        &lt;/&gt;
-      </a>
-      -->
-      
-    </div>
-    <div class="rendered-markdown"></div>
-  </div>
-  
-  <div class="member">
-    <div class="member-name">
-      <h2 id="create_wallet_fee"><pre class="hljs language-aiken">create_wallet_fee(fee: Fee) -&gt; Value</pre></h2>
-      
-      <!-- TODO: support source linking
-      <a class="member-source" alt="View Source" title="View Source" href="#todo">
-        &lt;/&gt;
-      </a>
-      -->
-      
-    </div>
-    <div class="rendered-markdown"></div>
-  </div>
-  
-  <div class="member">
-    <div class="member-name">
-      <h2 id="fee_asset_name"><pre class="hljs language-aiken">fee_asset_name() -&gt; AssetName</pre></h2>
-      
-      <!-- TODO: support source linking
-      <a class="member-source" alt="View Source" title="View Source" href="#todo">
-        &lt;/&gt;
-      </a>
-      -->
-      
-    </div>
-    <div class="rendered-markdown"><p>This could be the platform token name.
-Currently it’s ADA</p>
-</div>
-  </div>
-  
-  <div class="member">
-    <div class="member-name">
-      <h2 id="fee_policy_id"><pre class="hljs language-aiken">fee_policy_id() -&gt; PolicyId</pre></h2>
-      
-      <!-- TODO: support source linking
-      <a class="member-source" alt="View Source" title="View Source" href="#todo">
-        &lt;/&gt;
-      </a>
-      -->
-      
-    </div>
-    <div class="rendered-markdown"><p>This could be the platform token policy.
-Currently it’s ADA</p>
-</div>
-  </div>
-  
-  <div class="member">
-    <div class="member-name">
-      <h2 id="mint_pocket_key_fee"><pre class="hljs language-aiken">mint_pocket_key_fee(fee: Fee) -&gt; Value</pre></h2>
-      
-      <!-- TODO: support source linking
-      <a class="member-source" alt="View Source" title="View Source" href="#todo">
-        &lt;/&gt;
-      </a>
-      -->
-      
-    </div>
-    <div class="rendered-markdown"></div>
-  </div>
-  
-  <div class="member">
-    <div class="member-name">
-      <h2 id="mint_wallet_key_fee"><pre class="hljs language-aiken">mint_wallet_key_fee(fee: Fee) -&gt; Value</pre></h2>
-      
-      <!-- TODO: support source linking
-      <a class="member-source" alt="View Source" title="View Source" href="#todo">
-        &lt;/&gt;
-      </a>
-      -->
-      
-    </div>
-    <div class="rendered-markdown"></div>
-  </div>
-  
-  <div class="member">
-    <div class="member-name">
       <h2 id="paid_fee"><pre class="hljs language-aiken">paid_fee(
   outputs: List&lt;transaction.Output&gt;,
   fee: Value,
@@ -645,63 +532,7 @@ Currently it’s ADA</p>
   
   <div class="member">
     <div class="member-name">
-      <h2 id="redeem_funds_fee"><pre class="hljs language-aiken">redeem_funds_fee(fee: Fee) -&gt; Value</pre></h2>
-      
-      <!-- TODO: support source linking
-      <a class="member-source" alt="View Source" title="View Source" href="#todo">
-        &lt;/&gt;
-      </a>
-      -->
-      
-    </div>
-    <div class="rendered-markdown"></div>
-  </div>
-  
-  <div class="member">
-    <div class="member-name">
-      <h2 id="update_pocket_fee"><pre class="hljs language-aiken">update_pocket_fee(fee: Fee) -&gt; Value</pre></h2>
-      
-      <!-- TODO: support source linking
-      <a class="member-source" alt="View Source" title="View Source" href="#todo">
-        &lt;/&gt;
-      </a>
-      -->
-      
-    </div>
-    <div class="rendered-markdown"></div>
-  </div>
-  
-  <div class="member">
-    <div class="member-name">
-      <h2 id="update_wallet_fee"><pre class="hljs language-aiken">update_wallet_fee(fee: Fee) -&gt; Value</pre></h2>
-      
-      <!-- TODO: support source linking
-      <a class="member-source" alt="View Source" title="View Source" href="#todo">
-        &lt;/&gt;
-      </a>
-      -->
-      
-    </div>
-    <div class="rendered-markdown"></div>
-  </div>
-  
-  <div class="member">
-    <div class="member-name">
       <h2 id="verify_fee"><pre class="hljs language-aiken">verify_fee(fee: SignedFee) -&gt; Bool</pre></h2>
-      
-      <!-- TODO: support source linking
-      <a class="member-source" alt="View Source" title="View Source" href="#todo">
-        &lt;/&gt;
-      </a>
-      -->
-      
-    </div>
-    <div class="rendered-markdown"></div>
-  </div>
-  
-  <div class="member">
-    <div class="member-name">
-      <h2 id="withdraw_funds_fee"><pre class="hljs language-aiken">withdraw_funds_fee(fee: Fee) -&gt; Value</pre></h2>
       
       <!-- TODO: support source linking
       <a class="member-source" alt="View Source" title="View Source" href="#todo">
@@ -786,8 +617,8 @@ Currently it’s ADA</p>
       });
     </script>
     <script src="../js/lunr.min.js?v=1.0.19-alpha"></script>
-    <script src="../js/index.js?v=1699194201"></script>
+    <script src="../js/index.js?v=1699332846"></script>
     <!-- Load the search index using JSONP to avoid CORS issues -->
-    <script src="../search-data.js?v=1699194201"></script>
+    <script src="../search-data.js?v=1699332846"></script>
   </body>
 </html>
