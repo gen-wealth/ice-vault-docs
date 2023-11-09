@@ -7,8 +7,8 @@
     <meta name="theme-color" content="#eff1f5" media="(prefers-color-scheme: light)"/>
     <meta name="theme-color" content="#1e1e2e" media="(prefers-color-scheme: dark)"/>
     <link rel="icon" type="image/svg+xml" sizes="any" href="../favicon.svg"/>
-    <link rel="stylesheet" href="../css/index.css?v=1.0.19-alpha" type="text/css"/>
-    <link id="syntax-theme" rel="stylesheet" href="../css/atom-one-light.min.css?v=1.0.19-alpha"/>
+    <link rel="stylesheet" href="../css/index.css?v=1.0.20-alpha" type="text/css"/>
+    <link id="syntax-theme" rel="stylesheet" href="../css/atom-one-light.min.css?v=1.0.20-alpha"/>
   </head>
   <body class="prewrap-off theme-light drawer-closed">
     <script>
@@ -343,21 +343,14 @@
 
 
 
-<h2>Constants</h2>
-<ul>
-  
-  <li><a href="#oracle">oracle</a></li>
-  
-  <li><a href="#treasury">treasury</a></li>
-  
-</ul>
-
 
 
 <h2>Functions</h2>
 <ul>
   
   <li><a href="#paid_fee">paid_fee</a></li>
+  
+  <li><a href="#to_value">to_value</a></li>
   
   <li><a href="#verify_fee">verify_fee</a></li>
   
@@ -396,11 +389,7 @@
       
     </div>
     <div class="custom-type-constructors">
-      <div class="rendered-markdown"><ul>
-<li><code>nonce</code> is an arbitrary <code>UTxO</code> to generate a unique <code>signature</code>
-(the UTxO must be consumed)</li>
-</ul>
-</div>
+      <div class="rendered-markdown"></div>
       
       <h3>Constructors</h3>
       <ul class="constructor-list">
@@ -410,6 +399,9 @@
             <svg class="icon icon-box"><use xlink:href="#icon-box"></use></svg>
             <pre class="constructor-name"><code class="hljs aiken">Fee {
   nonce: OutputReference,
+  action_code: Int,
+  treasury: ByteArray,
+  oracle: ByteArray,
   token_policy: PolicyId,
   token_name: AssetName,
   amount: Qty,
@@ -461,50 +453,6 @@
 
 
 
-<section class="module-members">
-  <h1 id="module-constants" class="module-member-kind">
-    <a href="#module-constants">Constants</a>
-  </h1>
-
-  
-  <div class="member">
-    <div class="member-name">
-      <h2 id="oracle"><pre class="hljs language-aiken">oracle: ByteArray = #&quot;e09a77f9405b4f4daeff5e7da3307182dd556d9e1393a9dd04384c8d734899d2&quot;</pre></h2>
-      
-      <!-- TODO: support source linking
-      <a class="member-source" alt="View Source" title="View Source" href="#todo">
-        &lt;/&gt;
-      </a>
-      -->
-      
-    </div>
-    <div class="rendered-markdown"><p>This should be the fee oracle (eg. to set fees by exchange rate)</p>
-<p>PubKey:</p>
-<p><code>cborHex</code> of the <code>payment verification key file</code> (eg. <code>../.vkey</code>)</p>
-</div>
-  </div>
-  
-  <div class="member">
-    <div class="member-name">
-      <h2 id="treasury"><pre class="hljs language-aiken">treasury: ByteArray = #&quot;10757554dc6e71bacc3b8c87aaf5e61015b3a17e25e9df1823436dd1&quot;</pre></h2>
-      
-      <!-- TODO: support source linking
-      <a class="member-source" alt="View Source" title="View Source" href="#todo">
-        &lt;/&gt;
-      </a>
-      -->
-      
-    </div>
-    <div class="rendered-markdown"><p>This should be the validator hash of the treasury.
-Depending on the user’s consent, may also have access to unclaimed funds
-(after a long period of time of being unclaimed, eg. 10 years)</p>
-<p>PubKeyHash:</p>
-<p><code>cardano-cli address key-hash --payment-verification-key-file ../.vkey</code></p>
-</div>
-  </div>
-  
-</section>
-
 
 
 <section class="module-members">
@@ -517,8 +465,23 @@ Depending on the user’s consent, may also have access to unclaimed funds
       <h2 id="paid_fee"><pre class="hljs language-aiken">paid_fee(
   outputs: List&lt;transaction.Output&gt;,
   fee: Value,
+  treasury: fn() -&gt; ByteArray,
   consumed_nonce: fn() -&gt; Bool,
 ) -&gt; Bool</pre></h2>
+      
+      <!-- TODO: support source linking
+      <a class="member-source" alt="View Source" title="View Source" href="#todo">
+        &lt;/&gt;
+      </a>
+      -->
+      
+    </div>
+    <div class="rendered-markdown"></div>
+  </div>
+  
+  <div class="member">
+    <div class="member-name">
+      <h2 id="to_value"><pre class="hljs language-aiken">to_value(fee: Fee) -&gt; Value</pre></h2>
       
       <!-- TODO: support source linking
       <a class="member-source" alt="View Source" title="View Source" href="#todo">
@@ -596,8 +559,8 @@ Depending on the user’s consent, may also have access to unclaimed funds
       </defs>
     </svg>
 
-    <script src="../js/highlight.min.js?v=1.0.19-alpha"></script>
-    <script src="../js/highlightjs-aiken.js?v=1.0.19-alpha"></script>
+    <script src="../js/highlight.min.js?v=1.0.20-alpha"></script>
+    <script src="../js/highlightjs-aiken.js?v=1.0.20-alpha"></script>
     <script>
       document.querySelectorAll("pre code").forEach((elem) => {
         // if (elem.className === "") {
@@ -616,9 +579,9 @@ Depending on the user’s consent, may also have access to unclaimed funds
 	el.prepend(a);
       });
     </script>
-    <script src="../js/lunr.min.js?v=1.0.19-alpha"></script>
-    <script src="../js/index.js?v=1699332846"></script>
+    <script src="../js/lunr.min.js?v=1.0.20-alpha"></script>
+    <script src="../js/index.js?v=1699436177"></script>
     <!-- Load the search index using JSONP to avoid CORS issues -->
-    <script src="../search-data.js?v=1699332846"></script>
+    <script src="../search-data.js?v=1699436177"></script>
   </body>
 </html>
