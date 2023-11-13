@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>wallet/token - gen-wealth/❄️ice-wallet</title>
+    <title>wallet/constant - gen-wealth/❄️ice-wallet</title>
     <meta name="theme-color" content="#eff1f5" media="(prefers-color-scheme: light)"/>
     <meta name="theme-color" content="#1e1e2e" media="(prefers-color-scheme: dark)"/>
     <link rel="icon" type="image/svg+xml" sizes="any" href="../favicon.svg"/>
@@ -300,7 +300,7 @@
         
 	  <li><a href="../wallet/constant.html">
 	  
-	  wallet/constant
+	  <strong>wallet/constant</strong>
 	  
 	  </a></li>
         
@@ -330,7 +330,7 @@
         
 	  <li><a href="../wallet/token.html">
 	  
-	  <strong>wallet/token</strong>
+	  wallet/token
 	  
 	  </a></li>
         
@@ -338,25 +338,18 @@
 
         
 
-<h2>Types</h2>
+
+
+<h2>Constants</h2>
 <ul>
   
-  <li><a href="#TokenNames">TokenNames</a></li>
+  <li><a href="#fee_oracle">fee_oracle</a></li>
   
-  <li><a href="#Unique">Unique</a></li>
+  <li><a href="#platform_pkh">platform_pkh</a></li>
   
 </ul>
 
 
-
-
-
-<h2>Functions</h2>
-<ul>
-  
-  <li><a href="#count_unique">count_unique</a></li>
-  
-</ul>
 
 
       </nav>
@@ -364,104 +357,27 @@
       <main class="content">
         
 <h1 id="module-name" class="module-name">
-  <a href="#module-name">wallet/token</a>
+  <a href="#module-name">wallet/constant</a>
 </h1>
-
-
-
-<section class="module-members">
-  <h1 id="module-types" class="module-member-kind">
-    <a href="#module-types">Types</a>
-  </h1>
-
-  
-  <div class="member">
-    <div class="member-name">
-      <h2 id="TokenNames">
-        <a href="#TokenNames">
-	  TokenNames
-        </a>
-      </h2>
-      
-      <!-- TODO: support source linking
-      <a class="member-source" alt="View Source" title="View Source" href="#todo">
-        &lt;/&gt;
-      </a>
-      -->
-      
-    </div>
-    <div class="custom-type-constructors">
-      <div class="rendered-markdown"></div>
-      
-      <h3>Constructors</h3>
-      <ul class="constructor-list">
-        
-        <li class="constructor-item">
-          <div class="constructor-row">
-            <svg class="icon icon-box"><use xlink:href="#icon-box"></use></svg>
-            <pre class="constructor-name"><code class="hljs aiken">TokenNames {
-  wallet_lock: AssetName,
-  wallet_key: AssetName,
-  pocket_lock: AssetName,
-  pocket_key: AssetName,
-}</code></pre>
-          </div>
-	  
-        </li>
-        
-      </ul>
-      
-    </div>
-  </div>
-  
-  <div class="member">
-    <div class="member-name">
-      <h2 id="Unique">
-        <a href="#Unique">
-	  Unique
-        </a>
-      </h2>
-      
-      <!-- TODO: support source linking
-      <a class="member-source" alt="View Source" title="View Source" href="#todo">
-        &lt;/&gt;
-      </a>
-      -->
-      
-    </div>
-    <div class="custom-type-constructors">
-      <div class="rendered-markdown"></div>
-      
-      <h3>Constructors</h3>
-      <ul class="constructor-list">
-        
-        <li class="constructor-item">
-          <div class="constructor-row">
-            <svg class="icon icon-box"><use xlink:href="#icon-box"></use></svg>
-            <pre class="constructor-name"><code class="hljs aiken">Unique { count: Int }</code></pre>
-          </div>
-	  
-        </li>
-        
-      </ul>
-      
-    </div>
-  </div>
-  
-</section>
+<p>Here are the constant values used in the script.
+The values need to be baked in the script and are not parameterized
+because otherwise a user may be able to pass their own argument(s)
+and there’s no way for the script to verify.</p>
+<p>This module may also serve as a sort of script version.</p>
 
 
 
 
 
 <section class="module-members">
-  <h1 id="module-functions" class="module-member-kind">
-    <a href="#module-functions">Functions</a>
+  <h1 id="module-constants" class="module-member-kind">
+    <a href="#module-constants">Constants</a>
   </h1>
+
   
   <div class="member">
     <div class="member-name">
-      <h2 id="count_unique"><pre class="hljs language-aiken">count_unique(token_names: TokenNames) -&gt; Unique</pre></h2>
+      <h2 id="fee_oracle"><pre class="hljs language-aiken">fee_oracle: ByteArray = #&quot;6c684088e31c33c9746dcf96430f4911af0af16dcc496caaeeb494662ecb83e3&quot;</pre></h2>
       
       <!-- TODO: support source linking
       <a class="member-source" alt="View Source" title="View Source" href="#todo">
@@ -470,11 +386,33 @@
       -->
       
     </div>
-    <div class="rendered-markdown"><p>Used to validate unique token names.</p>
+    <div class="rendered-markdown"><p>This should be the fee oracle (eg. to set the fees by exchange rate)</p>
+<p>PubKey:</p>
+<p><code>cborHex</code> of the <code>payment verification key file</code> (eg. <code>../.vkey</code>)</p>
+</div>
+  </div>
+  
+  <div class="member">
+    <div class="member-name">
+      <h2 id="platform_pkh"><pre class="hljs language-aiken">platform_pkh: ByteArray = #&quot;10757554dc6e71bacc3b8c87aaf5e61015b3a17e25e9df1823436dd1&quot;</pre></h2>
+      
+      <!-- TODO: support source linking
+      <a class="member-source" alt="View Source" title="View Source" href="#todo">
+        &lt;/&gt;
+      </a>
+      -->
+      
+    </div>
+    <div class="rendered-markdown"><p>This should be the platform PKH used to sign the transaction when
+reclaiming unclaimed funds.</p>
+<p>PubKeyHash:</p>
+<p><code>cardano-cli address key-hash --payment-verification-key-file ../.vkey</code></p>
 </div>
   </div>
   
 </section>
+
+
 
 
       </main>

@@ -298,6 +298,12 @@
 	  
 	  </a></li>
         
+	  <li><a href="../wallet/constant.html">
+	  
+	  wallet/constant
+	  
+	  </a></li>
+        
 	  <li><a href="../wallet/control.html">
 	  
 	  wallet/control
@@ -345,57 +351,52 @@
   <a href="#module-name">tests/withdraw_funds</a>
 </h1>
 <pre><code>┍━ tests/withdraw_funds ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-│ PASS [mem:  6385779, cpu: 3805111114] withdraw_funds_positive_case
+│ PASS [mem:  6383545, cpu: 3804231660] withdraw_funds_positive_case
 │ ↳ Positive Case
 │ ↳ ScriptContext: &quot;d8799fd8799f9fd8799fd8799fd8799f4d506f636b65745f547848617368ff00ffd8799fd8799fd87a9f4e57616c6c65745f41646472657373ffd87a80ffa140a1401a001e8480d87b9fd87c9f4d506f636b65745f506f6c696379ffffd87a80ffffff9fd8799fd8799fd8799f5057616c6c65744b65795f547848617368ff00ffd8799fd8799fd8799f5257616c6c65745f43726561746f725f504b48ffd87a80ffa240a1401a001e84804d57616c6c65745f506f6c696379a14a57616c6c65745f4b657901d87980d87a80ffffff80a140a1401a001e8480a140a1400080a0d8799fd8799fd87b80d87a80ffd8799fd87980d87a80ffff9f5257616c6c65745f43726561746f725f504b48ffa0a0d8799f40ffffd87a9fd8799fd8799f4d506f636b65745f547848617368ff00ffffff&quot;
 │ ↳ spend.wallet_policy: &quot;4d57616c6c65745f506f6c696379&quot;
 │ ↳ spend.token_names: &quot;d8799f4b57616c6c65745f4c6f636b4a57616c6c65745f4b65794b506f636b65745f4c6f636b4a506f636b65745f4b6579ff&quot;
 │ ↳ spend.datum: &quot;d87c9f4d506f636b65745f506f6c696379ff&quot;
 │ ↳ spend.redeemer: &quot;d87d9fd8799fd8799fd8799fd8799f5820123456789a123456789b123456789c123456789d123456789e123456789f1234ff00ff07581c78418d881d5105846c9157f20ebf5c64f05aa7bed58bb9ec07a73c6d404000ff5840693f2af05c3420292dfd4e81c45f01af9eae0afb7810994b27c098089399a019bd90917576c2fa9017ac0d3266abda7dfa7d2c180db1fb2462dce23b7d8d7101ffff&quot;
-│ ↳ reclaimed_by_the_platform ? False
 │ ↳ Spending Action / Redeemer: WithdrawFunds
 │ ↳ Withdrawable UTxO Datum: &quot;d87c9f4d506f636b65745f506f6c696379ff&quot;
-│ PASS [mem:  6412250, cpu: 3824734278] withdraw_funds_negative_case_invalid_wallet_key_shown
+│ PASS [mem:  6410016, cpu: 3823854824] withdraw_funds_negative_case_invalid_wallet_key_shown
 │ ↳ Negative Case: INVALID WALLET KEY SHOWN
 │ ↳ ScriptContext: &quot;d8799fd8799f9fd8799fd8799fd8799f4d506f636b65745f547848617368ff00ffd8799fd8799fd87a9f4e57616c6c65745f41646472657373ffd87a80ffa140a1401a001e8480d87b9fd87c9f4d506f636b65745f506f6c696379ffffd87a80ffffff9fd8799fd8799fd8799f5057616c6c65744b65795f547848617368ff00ffd8799fd8799fd8799f5257616c6c65745f43726561746f725f504b48ffd87a80ffa240a1401a001e84805246616b655f57616c6c65745f506f6c696379a14a57616c6c65745f4b657901d87980d87a80ffffff80a140a1401a001e8480a140a1400080a0d8799fd8799fd87b80d87a80ffd8799fd87980d87a80ffff9f5257616c6c65745f43726561746f725f504b48ffa0a0d8799f40ffffd87a9fd8799fd8799f4d506f636b65745f547848617368ff00ffffff&quot;
 │ ↳ spend.wallet_policy: &quot;4d57616c6c65745f506f6c696379&quot;
 │ ↳ spend.token_names: &quot;d8799f4b57616c6c65745f4c6f636b4a57616c6c65745f4b65794b506f636b65745f4c6f636b4a506f636b65745f4b6579ff&quot;
 │ ↳ spend.datum: &quot;d87c9f4d506f636b65745f506f6c696379ff&quot;
 │ ↳ spend.redeemer: &quot;d87d9fd8799fd8799fd8799fd8799f5820123456789a123456789b123456789c123456789d123456789e123456789f1234ff00ff07581c78418d881d5105846c9157f20ebf5c64f05aa7bed58bb9ec07a73c6d404000ff5840693f2af05c3420292dfd4e81c45f01af9eae0afb7810994b27c098089399a019bd90917576c2fa9017ac0d3266abda7dfa7d2c180db1fb2462dce23b7d8d7101ffff&quot;
-│ ↳ reclaimed_by_the_platform ? False
 │ ↳ Spending Action / Redeemer: WithdrawFunds
 │ ↳ Withdrawable UTxO Datum: &quot;d87c9f4d506f636b65745f506f6c696379ff&quot;
 │ ↳ signed_by_key_token_holder ? False
-│ PASS [mem:  6111968, cpu: 3646040916] withdraw_funds_negative_case_does_not_show_wallet_key
+│ PASS [mem:  6109734, cpu: 3645161462] withdraw_funds_negative_case_does_not_show_wallet_key
 │ ↳ Negative Case: DOES NOT SHOW WALLET KEY
 │ ↳ ScriptContext: &quot;d8799fd8799f9fd8799fd8799fd8799f4d506f636b65745f547848617368ff00ffd8799fd8799fd87a9f4e57616c6c65745f41646472657373ffd87a80ffa140a1401a001e8480d87b9fd87c9f4d506f636b65745f506f6c696379ffffd87a80ffffff9fd8799fd8799fd8799f5057616c6c65744b65795f547848617368ff00ffd8799fd8799fd8799f5257616c6c65745f43726561746f725f504b48ffd87a80ffa140a1401a001e8480d87980d87a80ffffff80a140a1401a001e8480a140a1400080a0d8799fd8799fd87b80d87a80ffd8799fd87980d87a80ffff9f5257616c6c65745f43726561746f725f504b48ffa0a0d8799f40ffffd87a9fd8799fd8799f4d506f636b65745f547848617368ff00ffffff&quot;
 │ ↳ spend.wallet_policy: &quot;4d57616c6c65745f506f6c696379&quot;
 │ ↳ spend.token_names: &quot;d8799f4b57616c6c65745f4c6f636b4a57616c6c65745f4b65794b506f636b65745f4c6f636b4a506f636b65745f4b6579ff&quot;
 │ ↳ spend.datum: &quot;d87c9f4d506f636b65745f506f6c696379ff&quot;
 │ ↳ spend.redeemer: &quot;d87d9fd8799fd8799fd8799fd8799f5820123456789a123456789b123456789c123456789d123456789e123456789f1234ff00ff07581c78418d881d5105846c9157f20ebf5c64f05aa7bed58bb9ec07a73c6d404000ff5840693f2af05c3420292dfd4e81c45f01af9eae0afb7810994b27c098089399a019bd90917576c2fa9017ac0d3266abda7dfa7d2c180db1fb2462dce23b7d8d7101ffff&quot;
-│ ↳ reclaimed_by_the_platform ? False
 │ ↳ Spending Action / Redeemer: WithdrawFunds
 │ ↳ Withdrawable UTxO Datum: &quot;d87c9f4d506f636b65745f506f6c696379ff&quot;
 │ ↳ signed_by_key_token_holder ? False
-│ PASS [mem:  5279944, cpu: 3165532425] withdraw_funds_negative_case_does_not_refer_to_wallet_key
+│ PASS [mem:  5277710, cpu: 3164652971] withdraw_funds_negative_case_does_not_refer_to_wallet_key
 │ ↳ Negative Case: DOES NOT REFER TO WALLET KEY
 │ ↳ ScriptContext: &quot;d8799fd8799f9fd8799fd8799fd8799f4d506f636b65745f547848617368ff00ffd8799fd8799fd87a9f4e57616c6c65745f41646472657373ffd87a80ffa140a1401a001e8480d87b9fd87c9f4d506f636b65745f506f6c696379ffffd87a80ffffff8080a140a1401a001e8480a140a1400080a0d8799fd8799fd87b80d87a80ffd8799fd87980d87a80ffff9f5257616c6c65745f43726561746f725f504b48ffa0a0d8799f40ffffd87a9fd8799fd8799f4d506f636b65745f547848617368ff00ffffff&quot;
 │ ↳ spend.wallet_policy: &quot;4d57616c6c65745f506f6c696379&quot;
 │ ↳ spend.token_names: &quot;d8799f4b57616c6c65745f4c6f636b4a57616c6c65745f4b65794b506f636b65745f4c6f636b4a506f636b65745f4b6579ff&quot;
 │ ↳ spend.datum: &quot;d87c9f4d506f636b65745f506f6c696379ff&quot;
 │ ↳ spend.redeemer: &quot;d87d9fd8799fd8799fd8799fd8799f5820123456789a123456789b123456789c123456789d123456789e123456789f1234ff00ff07581c78418d881d5105846c9157f20ebf5c64f05aa7bed58bb9ec07a73c6d404000ff5840693f2af05c3420292dfd4e81c45f01af9eae0afb7810994b27c098089399a019bd90917576c2fa9017ac0d3266abda7dfa7d2c180db1fb2462dce23b7d8d7101ffff&quot;
-│ ↳ reclaimed_by_the_platform ? False
 │ ↳ Spending Action / Redeemer: WithdrawFunds
 │ ↳ Withdrawable UTxO Datum: &quot;d87c9f4d506f636b65745f506f6c696379ff&quot;
 │ ↳ signed_by_key_token_holder ? False
-│ PASS [mem:  6154310, cpu: 3681160305] withdraw_funds_negative_case_does_not_sign_the_txn
+│ PASS [mem:  6152076, cpu: 3680280851] withdraw_funds_negative_case_does_not_sign_the_txn
 │ ↳ Negative Case: DOES NOT SIGN THE TXN
 │ ↳ ScriptContext: &quot;d8799fd8799f9fd8799fd8799fd8799f4d506f636b65745f547848617368ff00ffd8799fd8799fd87a9f4e57616c6c65745f41646472657373ffd87a80ffa140a1401a001e8480d87b9fd87c9f4d506f636b65745f506f6c696379ffffd87a80ffffff9fd8799fd8799fd8799f5057616c6c65744b65795f547848617368ff00ffd8799fd8799fd8799f5257616c6c65745f43726561746f725f504b48ffd87a80ffa240a1401a001e84804d57616c6c65745f506f6c696379a14a57616c6c65745f4b657901d87980d87a80ffffff80a140a1401a001e8480a140a1400080a0d8799fd8799fd87b80d87a80ffd8799fd87980d87a80ffff80a0a0d8799f40ffffd87a9fd8799fd8799f4d506f636b65745f547848617368ff00ffffff&quot;
 │ ↳ spend.wallet_policy: &quot;4d57616c6c65745f506f6c696379&quot;
 │ ↳ spend.token_names: &quot;d8799f4b57616c6c65745f4c6f636b4a57616c6c65745f4b65794b506f636b65745f4c6f636b4a506f636b65745f4b6579ff&quot;
 │ ↳ spend.datum: &quot;d87c9f4d506f636b65745f506f6c696379ff&quot;
 │ ↳ spend.redeemer: &quot;d87d9fd8799fd8799fd8799fd8799f5820123456789a123456789b123456789c123456789d123456789e123456789f1234ff00ff07581c78418d881d5105846c9157f20ebf5c64f05aa7bed58bb9ec07a73c6d404000ff5840693f2af05c3420292dfd4e81c45f01af9eae0afb7810994b27c098089399a019bd90917576c2fa9017ac0d3266abda7dfa7d2c180db1fb2462dce23b7d8d7101ffff&quot;
-│ ↳ reclaimed_by_the_platform ? False
 │ ↳ Spending Action / Redeemer: WithdrawFunds
 │ ↳ Withdrawable UTxO Datum: &quot;d87c9f4d506f636b65745f506f6c696379ff&quot;
 │ ↳ signed_by_key_token_holder ? False
@@ -479,8 +480,8 @@
       });
     </script>
     <script src="../js/lunr.min.js?v=1.0.20-alpha"></script>
-    <script src="../js/index.js?v=1699618924"></script>
+    <script src="../js/index.js?v=1699793857"></script>
     <!-- Load the search index using JSONP to avoid CORS issues -->
-    <script src="../search-data.js?v=1699618924"></script>
+    <script src="../search-data.js?v=1699793857"></script>
   </body>
 </html>
