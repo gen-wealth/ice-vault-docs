@@ -405,11 +405,11 @@
 As redeemer, this allows wallet lock minting.</p>
 <ul>
 <li><code>name</code> is the wallet name.</li>
-<li><code>deadline</code> is the time when a pocket key holder is allowed to
-redeem the funds from the corresponding pocket.</li>
-<li><code>reclaimable</code> is the user’s consent whether the unclaimed funds may be
-reclaimed by the platform after a long period of not being redeemed by
-the beneficiaries,
+<li><code>deadline</code> is the time when a pocket key holder is allowed
+to redeem the funds from the corresponding pocket.</li>
+<li><code>reclaimable</code> is the user’s consent whether the unclaimed
+funds may be reclaimed by the platform after a period of
+time not being redeemed by the beneficiaries,
 <ul>
 <li><code>&lt;=-1</code>: Unreclaimable</li>
 <li><code>== 0</code>: Immediately reclaimable after the <code>deadline</code></li>
@@ -617,7 +617,9 @@ pocket lock)</p>
           <div class="constructor-item-docs">
             <p>[<code>Datum</code>]</p>
 <blockquote>
-<p>TODO: Future Use</p>
+<p>Used to hold rewards given by the platform.
+It’s located outside of any pocket, and can
+be withdrawn by a wallet key token holder.</p>
 </blockquote>
 
           </div>
@@ -706,8 +708,8 @@ pocket lock)</p>
       });
     </script>
     <script src="../js/lunr.min.js?v=1.0.20-alpha"></script>
-    <script src="../js/index.js?v=1699793857"></script>
+    <script src="../js/index.js?v=1699903237"></script>
     <!-- Load the search index using JSONP to avoid CORS issues -->
-    <script src="../search-data.js?v=1699793857"></script>
+    <script src="../search-data.js?v=1699903237"></script>
   </body>
 </html>
