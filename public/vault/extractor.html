@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>wallet/locker - gen-wealth/❄️ice-wallet</title>
+    <title>vault/extractor - gen-wealth/❄️ice-vault</title>
     <meta name="theme-color" content="#eff1f5" media="(prefers-color-scheme: light)"/>
     <meta name="theme-color" content="#1e1e2e" media="(prefers-color-scheme: dark)"/>
     <link rel="icon" type="image/svg+xml" sizes="any" href="../favicon.svg"/>
@@ -118,7 +118,7 @@
       </button>
 
       <h2>
-        <a href="../">❄️ice-wallet</a>
+        <a href="../">❄️ice-vault</a>
         <span id="project-version">
           <span>v0.0.0 </span>
         </span>
@@ -156,7 +156,7 @@
       </h2>
       <div class="search">
         <div class="search-input-wrap">
-          <input type="text" id="search-input" class="search-input" tabindex="0" aria-label="Search ❄️ice-wallet" autocomplete="off">
+          <input type="text" id="search-input" class="search-input" tabindex="0" aria-label="Search ❄️ice-vault" autocomplete="off">
           <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#icon-svg-search"></use></svg></label>
         </div>
         <div id="search-results" class="search-results"></div>
@@ -182,7 +182,7 @@
         
         <h2>Source code</h2>
         <ul>
-          <li><a href="https://github.com/gen-wealth/ice-wallet">gen-wealth/ice-wallet</a></li>
+          <li><a href="https://github.com/gen-wealth/ice-vault">gen-wealth/ice-vault</a></li>
         </ul>
         
 
@@ -202,9 +202,9 @@
 	  
 	  </a></li>
         
-	  <li><a href="../tests/burn_wallet_key.html">
+	  <li><a href="../tests/burn_vault_key.html">
 	  
-	  tests/burn_wallet_key
+	  tests/burn_vault_key
 	  
 	  </a></li>
         
@@ -220,9 +220,9 @@
 	  
 	  </a></li>
         
-	  <li><a href="../tests/create_wallet.html">
+	  <li><a href="../tests/create_vault.html">
 	  
-	  tests/create_wallet
+	  tests/create_vault
 	  
 	  </a></li>
         
@@ -244,9 +244,9 @@
 	  
 	  </a></li>
         
-	  <li><a href="../tests/mint_wallet_key.html">
+	  <li><a href="../tests/mint_vault_key.html">
 	  
-	  tests/mint_wallet_key
+	  tests/mint_vault_key
 	  
 	  </a></li>
         
@@ -274,9 +274,9 @@
 	  
 	  </a></li>
         
-	  <li><a href="../tests/update_wallet.html">
+	  <li><a href="../tests/update_vault.html">
 	  
-	  tests/update_wallet
+	  tests/update_vault
 	  
 	  </a></li>
         
@@ -286,51 +286,51 @@
 	  
 	  </a></li>
         
-	  <li><a href="../wallet/action.html">
+	  <li><a href="../vault/action.html">
 	  
-	  wallet/action
-	  
-	  </a></li>
-        
-	  <li><a href="../wallet/alias.html">
-	  
-	  wallet/alias
+	  vault/action
 	  
 	  </a></li>
         
-	  <li><a href="../wallet/constant.html">
+	  <li><a href="../vault/alias.html">
 	  
-	  wallet/constant
-	  
-	  </a></li>
-        
-	  <li><a href="../wallet/control.html">
-	  
-	  wallet/control
+	  vault/alias
 	  
 	  </a></li>
         
-	  <li><a href="../wallet/extractor.html">
+	  <li><a href="../vault/constant.html">
 	  
-	  wallet/extractor
-	  
-	  </a></li>
-        
-	  <li><a href="../wallet/locker.html">
-	  
-	  <strong>wallet/locker</strong>
+	  vault/constant
 	  
 	  </a></li>
         
-	  <li><a href="../wallet/monetization.html">
+	  <li><a href="../vault/control.html">
 	  
-	  wallet/monetization
+	  vault/control
 	  
 	  </a></li>
         
-	  <li><a href="../wallet/token.html">
+	  <li><a href="../vault/extractor.html">
 	  
-	  wallet/token
+	  <strong>vault/extractor</strong>
+	  
+	  </a></li>
+        
+	  <li><a href="../vault/locker.html">
+	  
+	  vault/locker
+	  
+	  </a></li>
+        
+	  <li><a href="../vault/monetization.html">
+	  
+	  vault/monetization
+	  
+	  </a></li>
+        
+	  <li><a href="../vault/token.html">
+	  
+	  vault/token
 	  
 	  </a></li>
         
@@ -345,11 +345,11 @@
 <h2>Functions</h2>
 <ul>
   
-  <li><a href="#mint_pocket">mint_pocket</a></li>
+  <li><a href="#unwrap_credential">unwrap_credential</a></li>
   
-  <li><a href="#mint_wallet">mint_wallet</a></li>
+  <li><a href="#unwrap_lock_policy">unwrap_lock_policy</a></li>
   
-  <li><a href="#spend">spend</a></li>
+  <li><a href="#unwrap_script_scredential">unwrap_script_scredential</a></li>
   
 </ul>
 
@@ -359,7 +359,7 @@
       <main class="content">
         
 <h1 id="module-name" class="module-name">
-  <a href="#module-name">wallet/locker</a>
+  <a href="#module-name">vault/extractor</a>
 </h1>
 
 
@@ -375,13 +375,7 @@
   
   <div class="member">
     <div class="member-name">
-      <h2 id="mint_pocket"><pre class="hljs language-aiken">mint_pocket(
-  utxo_ref: OutputReference,
-  wallet_policy: PolicyId,
-  token_names: TokenNames,
-  redeemer: Action,
-  context: ScriptContext,
-) -&gt; Bool</pre></h2>
+      <h2 id="unwrap_credential"><pre class="hljs language-aiken">unwrap_credential(credential: Credential) -&gt; ByteArray</pre></h2>
       
       <!-- TODO: support source linking
       <a class="member-source" alt="View Source" title="View Source" href="#todo">
@@ -395,13 +389,7 @@
   
   <div class="member">
     <div class="member-name">
-      <h2 id="mint_wallet"><pre class="hljs language-aiken">mint_wallet(
-  utxo_ref: OutputReference,
-  pkh: PubKeyHash,
-  token_names: TokenNames,
-  redeemer: Action,
-  context: ScriptContext,
-) -&gt; Bool</pre></h2>
+      <h2 id="unwrap_lock_policy"><pre class="hljs language-aiken">unwrap_lock_policy(lock: FlattenValue, lock_name: AssetName) -&gt; Option&lt;PolicyId&gt;</pre></h2>
       
       <!-- TODO: support source linking
       <a class="member-source" alt="View Source" title="View Source" href="#todo">
@@ -415,13 +403,7 @@
   
   <div class="member">
     <div class="member-name">
-      <h2 id="spend"><pre class="hljs language-aiken">spend(
-  wallet_policy: PolicyId,
-  token_names: TokenNames,
-  datum: Action,
-  redeemer: Action,
-  context: ScriptContext,
-) -&gt; Bool</pre></h2>
+      <h2 id="unwrap_script_scredential"><pre class="hljs language-aiken">unwrap_script_scredential(output: transaction.Output) -&gt; Option&lt;ValidatorHash&gt;</pre></h2>
       
       <!-- TODO: support source linking
       <a class="member-source" alt="View Source" title="View Source" href="#todo">
@@ -506,8 +488,8 @@
       });
     </script>
     <script src="../js/lunr.min.js?v=1.0.20-alpha"></script>
-    <script src="../js/index.js?v=1699903237"></script>
+    <script src="../js/index.js?v=1700320742"></script>
     <!-- Load the search index using JSONP to avoid CORS issues -->
-    <script src="../search-data.js?v=1699903237"></script>
+    <script src="../search-data.js?v=1700320742"></script>
   </body>
 </html>

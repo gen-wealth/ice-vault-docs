@@ -1,4 +1,4 @@
-# inheritance-wallet-docs
+# ice-vault-docs
 
 ```bash
 npm install -g firebase-tools

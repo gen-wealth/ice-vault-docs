@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>wallet/monetization - gen-wealth/❄️ice-wallet</title>
+    <title>tests/burn_vault_key - gen-wealth/❄️ice-vault</title>
     <meta name="theme-color" content="#eff1f5" media="(prefers-color-scheme: light)"/>
     <meta name="theme-color" content="#1e1e2e" media="(prefers-color-scheme: dark)"/>
     <link rel="icon" type="image/svg+xml" sizes="any" href="../favicon.svg"/>
@@ -118,7 +118,7 @@
       </button>
 
       <h2>
-        <a href="../">❄️ice-wallet</a>
+        <a href="../">❄️ice-vault</a>
         <span id="project-version">
           <span>v0.0.0 </span>
         </span>
@@ -156,7 +156,7 @@
       </h2>
       <div class="search">
         <div class="search-input-wrap">
-          <input type="text" id="search-input" class="search-input" tabindex="0" aria-label="Search ❄️ice-wallet" autocomplete="off">
+          <input type="text" id="search-input" class="search-input" tabindex="0" aria-label="Search ❄️ice-vault" autocomplete="off">
           <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#icon-svg-search"></use></svg></label>
         </div>
         <div id="search-results" class="search-results"></div>
@@ -182,7 +182,7 @@
         
         <h2>Source code</h2>
         <ul>
-          <li><a href="https://github.com/gen-wealth/ice-wallet">gen-wealth/ice-wallet</a></li>
+          <li><a href="https://github.com/gen-wealth/ice-vault">gen-wealth/ice-vault</a></li>
         </ul>
         
 
@@ -202,9 +202,9 @@
 	  
 	  </a></li>
         
-	  <li><a href="../tests/burn_wallet_key.html">
+	  <li><a href="../tests/burn_vault_key.html">
 	  
-	  tests/burn_wallet_key
+	  <strong>tests/burn_vault_key</strong>
 	  
 	  </a></li>
         
@@ -220,9 +220,9 @@
 	  
 	  </a></li>
         
-	  <li><a href="../tests/create_wallet.html">
+	  <li><a href="../tests/create_vault.html">
 	  
-	  tests/create_wallet
+	  tests/create_vault
 	  
 	  </a></li>
         
@@ -244,9 +244,9 @@
 	  
 	  </a></li>
         
-	  <li><a href="../tests/mint_wallet_key.html">
+	  <li><a href="../tests/mint_vault_key.html">
 	  
-	  tests/mint_wallet_key
+	  tests/mint_vault_key
 	  
 	  </a></li>
         
@@ -274,9 +274,9 @@
 	  
 	  </a></li>
         
-	  <li><a href="../tests/update_wallet.html">
+	  <li><a href="../tests/update_vault.html">
 	  
-	  tests/update_wallet
+	  tests/update_vault
 	  
 	  </a></li>
         
@@ -286,51 +286,51 @@
 	  
 	  </a></li>
         
-	  <li><a href="../wallet/action.html">
+	  <li><a href="../vault/action.html">
 	  
-	  wallet/action
-	  
-	  </a></li>
-        
-	  <li><a href="../wallet/alias.html">
-	  
-	  wallet/alias
+	  vault/action
 	  
 	  </a></li>
         
-	  <li><a href="../wallet/constant.html">
+	  <li><a href="../vault/alias.html">
 	  
-	  wallet/constant
-	  
-	  </a></li>
-        
-	  <li><a href="../wallet/control.html">
-	  
-	  wallet/control
+	  vault/alias
 	  
 	  </a></li>
         
-	  <li><a href="../wallet/extractor.html">
+	  <li><a href="../vault/constant.html">
 	  
-	  wallet/extractor
-	  
-	  </a></li>
-        
-	  <li><a href="../wallet/locker.html">
-	  
-	  wallet/locker
+	  vault/constant
 	  
 	  </a></li>
         
-	  <li><a href="../wallet/monetization.html">
+	  <li><a href="../vault/control.html">
 	  
-	  <strong>wallet/monetization</strong>
+	  vault/control
 	  
 	  </a></li>
         
-	  <li><a href="../wallet/token.html">
+	  <li><a href="../vault/extractor.html">
 	  
-	  wallet/token
+	  vault/extractor
+	  
+	  </a></li>
+        
+	  <li><a href="../vault/locker.html">
+	  
+	  vault/locker
+	  
+	  </a></li>
+        
+	  <li><a href="../vault/monetization.html">
+	  
+	  vault/monetization
+	  
+	  </a></li>
+        
+	  <li><a href="../vault/token.html">
+	  
+	  vault/token
 	  
 	  </a></li>
         
@@ -338,29 +338,9 @@
 
         
 
-<h2>Types</h2>
-<ul>
-  
-  <li><a href="#Fee">Fee</a></li>
-  
-  <li><a href="#SignedFee">SignedFee</a></li>
-  
-</ul>
 
 
 
-
-
-<h2>Functions</h2>
-<ul>
-  
-  <li><a href="#paid_fee">paid_fee</a></li>
-  
-  <li><a href="#to_value">to_value</a></li>
-  
-  <li><a href="#verify_fee">verify_fee</a></li>
-  
-</ul>
 
 
       </nav>
@@ -368,151 +348,24 @@
       <main class="content">
         
 <h1 id="module-name" class="module-name">
-  <a href="#module-name">wallet/monetization</a>
+  <a href="#module-name">tests/burn_vault_key</a>
 </h1>
-
-
-
-<section class="module-members">
-  <h1 id="module-types" class="module-member-kind">
-    <a href="#module-types">Types</a>
-  </h1>
-
-  
-  <div class="member">
-    <div class="member-name">
-      <h2 id="Fee">
-        <a href="#Fee">
-	  Fee
-        </a>
-      </h2>
-      
-      <!-- TODO: support source linking
-      <a class="member-source" alt="View Source" title="View Source" href="#todo">
-        &lt;/&gt;
-      </a>
-      -->
-      
-    </div>
-    <div class="custom-type-constructors">
-      <div class="rendered-markdown"></div>
-      
-      <h3>Constructors</h3>
-      <ul class="constructor-list">
-        
-        <li class="constructor-item">
-          <div class="constructor-row">
-            <svg class="icon icon-box"><use xlink:href="#icon-box"></use></svg>
-            <pre class="constructor-name"><code class="hljs aiken">Fee {
-  nonce: OutputReference,
-  action_code: Int,
-  treasury: ByteArray,
-  token_policy: PolicyId,
-  token_name: AssetName,
-  amount: Qty,
-}</code></pre>
-          </div>
-	  
-        </li>
-        
-      </ul>
-      
-    </div>
-  </div>
-  
-  <div class="member">
-    <div class="member-name">
-      <h2 id="SignedFee">
-        <a href="#SignedFee">
-	  SignedFee
-        </a>
-      </h2>
-      
-      <!-- TODO: support source linking
-      <a class="member-source" alt="View Source" title="View Source" href="#todo">
-        &lt;/&gt;
-      </a>
-      -->
-      
-    </div>
-    <div class="custom-type-constructors">
-      <div class="rendered-markdown"></div>
-      
-      <h3>Constructors</h3>
-      <ul class="constructor-list">
-        
-        <li class="constructor-item">
-          <div class="constructor-row">
-            <svg class="icon icon-box"><use xlink:href="#icon-box"></use></svg>
-            <pre class="constructor-name"><code class="hljs aiken">SignedFee { fee: Fee, signature: ByteArray }</code></pre>
-          </div>
-	  
-        </li>
-        
-      </ul>
-      
-    </div>
-  </div>
-  
-</section>
+<pre><code>┍━ tests/burn_vault_key ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+│ PASS [mem:  2192693, cpu: 1277286689] burn_vault_key
+│ ↳ ScriptContext: &quot;d8799fd8799f808080a140a1401a001e8480a240a140004c5661756c745f506f6c696379a1495661756c745f4b65792080a0d8799fd8799fd87b80d87a80ffd8799fd87980d87a80ffff80a0a0d8799f40ffffd8799f4c5661756c745f506f6c696379ffff&quot;
+│ ↳ mint_vault.utxo_ref: &quot;d8799fd8799f524372656174655661756c745f547848617368ff00ff&quot;
+│ ↳ mint_vault.pkh: &quot;515661756c745f43726561746f725f504b48&quot;
+│ ↳ mint_vault.token_names: &quot;d8799f4a5661756c745f4c6f636b495661756c745f4b65794b506f636b65745f4c6f636b4a506f636b65745f4b6579ff&quot;
+│ ↳ mint_vault.redeemer: &quot;d9050380&quot;
+│ ↳ Vault Burning Action / Redeemer: BurnVaultKey
+┕━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1 tests | 1 passed | 0 failed
+</code></pre>
 
 
 
 
 
-<section class="module-members">
-  <h1 id="module-functions" class="module-member-kind">
-    <a href="#module-functions">Functions</a>
-  </h1>
-  
-  <div class="member">
-    <div class="member-name">
-      <h2 id="paid_fee"><pre class="hljs language-aiken">paid_fee(
-  outputs: List&lt;transaction.Output&gt;,
-  fee: Value,
-  treasury: fn() -&gt; ByteArray,
-  consumed_nonce: fn() -&gt; Bool,
-) -&gt; Bool</pre></h2>
-      
-      <!-- TODO: support source linking
-      <a class="member-source" alt="View Source" title="View Source" href="#todo">
-        &lt;/&gt;
-      </a>
-      -->
-      
-    </div>
-    <div class="rendered-markdown"></div>
-  </div>
-  
-  <div class="member">
-    <div class="member-name">
-      <h2 id="to_value"><pre class="hljs language-aiken">to_value(fee: Fee) -&gt; Value</pre></h2>
-      
-      <!-- TODO: support source linking
-      <a class="member-source" alt="View Source" title="View Source" href="#todo">
-        &lt;/&gt;
-      </a>
-      -->
-      
-    </div>
-    <div class="rendered-markdown"></div>
-  </div>
-  
-  <div class="member">
-    <div class="member-name">
-      <h2 id="verify_fee"><pre class="hljs language-aiken">verify_fee(fee: SignedFee) -&gt; Bool</pre></h2>
-      
-      <!-- TODO: support source linking
-      <a class="member-source" alt="View Source" title="View Source" href="#todo">
-        &lt;/&gt;
-      </a>
-      -->
-      
-    </div>
-    <div class="rendered-markdown"></div>
-  </div>
-  
-</section>
+
 
 
       </main>
@@ -585,8 +438,8 @@
       });
     </script>
     <script src="../js/lunr.min.js?v=1.0.20-alpha"></script>
-    <script src="../js/index.js?v=1699903237"></script>
+    <script src="../js/index.js?v=1700320742"></script>
     <!-- Load the search index using JSONP to avoid CORS issues -->
-    <script src="../search-data.js?v=1699903237"></script>
+    <script src="../search-data.js?v=1700320742"></script>
   </body>
 </html>

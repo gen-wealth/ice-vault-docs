@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>tests/burn_pocket_key - gen-wealth/❄️ice-wallet</title>
+    <title>tests/burn_pocket_key - gen-wealth/❄️ice-vault</title>
     <meta name="theme-color" content="#eff1f5" media="(prefers-color-scheme: light)"/>
     <meta name="theme-color" content="#1e1e2e" media="(prefers-color-scheme: dark)"/>
     <link rel="icon" type="image/svg+xml" sizes="any" href="../favicon.svg"/>
@@ -118,7 +118,7 @@
       </button>
 
       <h2>
-        <a href="../">❄️ice-wallet</a>
+        <a href="../">❄️ice-vault</a>
         <span id="project-version">
           <span>v0.0.0 </span>
         </span>
@@ -156,7 +156,7 @@
       </h2>
       <div class="search">
         <div class="search-input-wrap">
-          <input type="text" id="search-input" class="search-input" tabindex="0" aria-label="Search ❄️ice-wallet" autocomplete="off">
+          <input type="text" id="search-input" class="search-input" tabindex="0" aria-label="Search ❄️ice-vault" autocomplete="off">
           <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#icon-svg-search"></use></svg></label>
         </div>
         <div id="search-results" class="search-results"></div>
@@ -182,7 +182,7 @@
         
         <h2>Source code</h2>
         <ul>
-          <li><a href="https://github.com/gen-wealth/ice-wallet">gen-wealth/ice-wallet</a></li>
+          <li><a href="https://github.com/gen-wealth/ice-vault">gen-wealth/ice-vault</a></li>
         </ul>
         
 
@@ -202,9 +202,9 @@
 	  
 	  </a></li>
         
-	  <li><a href="../tests/burn_wallet_key.html">
+	  <li><a href="../tests/burn_vault_key.html">
 	  
-	  tests/burn_wallet_key
+	  tests/burn_vault_key
 	  
 	  </a></li>
         
@@ -220,9 +220,9 @@
 	  
 	  </a></li>
         
-	  <li><a href="../tests/create_wallet.html">
+	  <li><a href="../tests/create_vault.html">
 	  
-	  tests/create_wallet
+	  tests/create_vault
 	  
 	  </a></li>
         
@@ -244,9 +244,9 @@
 	  
 	  </a></li>
         
-	  <li><a href="../tests/mint_wallet_key.html">
+	  <li><a href="../tests/mint_vault_key.html">
 	  
-	  tests/mint_wallet_key
+	  tests/mint_vault_key
 	  
 	  </a></li>
         
@@ -274,9 +274,9 @@
 	  
 	  </a></li>
         
-	  <li><a href="../tests/update_wallet.html">
+	  <li><a href="../tests/update_vault.html">
 	  
-	  tests/update_wallet
+	  tests/update_vault
 	  
 	  </a></li>
         
@@ -286,51 +286,51 @@
 	  
 	  </a></li>
         
-	  <li><a href="../wallet/action.html">
+	  <li><a href="../vault/action.html">
 	  
-	  wallet/action
-	  
-	  </a></li>
-        
-	  <li><a href="../wallet/alias.html">
-	  
-	  wallet/alias
+	  vault/action
 	  
 	  </a></li>
         
-	  <li><a href="../wallet/constant.html">
+	  <li><a href="../vault/alias.html">
 	  
-	  wallet/constant
-	  
-	  </a></li>
-        
-	  <li><a href="../wallet/control.html">
-	  
-	  wallet/control
+	  vault/alias
 	  
 	  </a></li>
         
-	  <li><a href="../wallet/extractor.html">
+	  <li><a href="../vault/constant.html">
 	  
-	  wallet/extractor
-	  
-	  </a></li>
-        
-	  <li><a href="../wallet/locker.html">
-	  
-	  wallet/locker
+	  vault/constant
 	  
 	  </a></li>
         
-	  <li><a href="../wallet/monetization.html">
+	  <li><a href="../vault/control.html">
 	  
-	  wallet/monetization
+	  vault/control
 	  
 	  </a></li>
         
-	  <li><a href="../wallet/token.html">
+	  <li><a href="../vault/extractor.html">
 	  
-	  wallet/token
+	  vault/extractor
+	  
+	  </a></li>
+        
+	  <li><a href="../vault/locker.html">
+	  
+	  vault/locker
+	  
+	  </a></li>
+        
+	  <li><a href="../vault/monetization.html">
+	  
+	  vault/monetization
+	  
+	  </a></li>
+        
+	  <li><a href="../vault/token.html">
+	  
+	  vault/token
 	  
 	  </a></li>
         
@@ -351,11 +351,11 @@
   <a href="#module-name">tests/burn_pocket_key</a>
 </h1>
 <pre><code>┍━ tests/burn_pocket_key ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-│ PASS [mem:  2208947, cpu: 1288037082] burn_pocket_key
+│ PASS [mem:  2182987, cpu: 1272906053] burn_pocket_key
 │ ↳ ScriptContext: &quot;d8799fd8799f808080a140a1401a001e8480a240a140004d506f636b65745f506f6c696379a14a506f636b65745f4b65792080a0d8799fd8799fd87b80d87a80ffd8799fd87980d87a80ffff80a0a0d8799f40ffffd8799f4d506f636b65745f506f6c696379ffff&quot;
 │ ↳ mint_pocket.utxo_ref: &quot;d8799fd8799f53437265617465506f636b65745f547848617368ff00ff&quot;
-│ ↳ mint_pocket.wallet_policy: &quot;4d57616c6c65745f506f6c696379&quot;
-│ ↳ mint_pocket.token_names: &quot;d8799f4b57616c6c65745f4c6f636b4a57616c6c65745f4b65794b506f636b65745f4c6f636b4a506f636b65745f4b6579ff&quot;
+│ ↳ mint_pocket.vault_policy: &quot;4c5661756c745f506f6c696379&quot;
+│ ↳ mint_pocket.token_names: &quot;d8799f4a5661756c745f4c6f636b495661756c745f4b65794b506f636b65745f4c6f636b4a506f636b65745f4b6579ff&quot;
 │ ↳ mint_pocket.redeemer: &quot;d9050480&quot;
 │ ↳ Pocket Burning Action / Redeemer: BurnPocketKey
 ┕━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1 tests | 1 passed | 0 failed
@@ -438,8 +438,8 @@
       });
     </script>
     <script src="../js/lunr.min.js?v=1.0.20-alpha"></script>
-    <script src="../js/index.js?v=1699903237"></script>
+    <script src="../js/index.js?v=1700320742"></script>
     <!-- Load the search index using JSONP to avoid CORS issues -->
-    <script src="../search-data.js?v=1699903237"></script>
+    <script src="../search-data.js?v=1700320742"></script>
   </body>
 </html>

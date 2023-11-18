@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>wallet/control - gen-wealth/❄️ice-wallet</title>
+    <title>vault/action - gen-wealth/❄️ice-vault</title>
     <meta name="theme-color" content="#eff1f5" media="(prefers-color-scheme: light)"/>
     <meta name="theme-color" content="#1e1e2e" media="(prefers-color-scheme: dark)"/>
     <link rel="icon" type="image/svg+xml" sizes="any" href="../favicon.svg"/>
@@ -118,7 +118,7 @@
       </button>
 
       <h2>
-        <a href="../">❄️ice-wallet</a>
+        <a href="../">❄️ice-vault</a>
         <span id="project-version">
           <span>v0.0.0 </span>
         </span>
@@ -156,7 +156,7 @@
       </h2>
       <div class="search">
         <div class="search-input-wrap">
-          <input type="text" id="search-input" class="search-input" tabindex="0" aria-label="Search ❄️ice-wallet" autocomplete="off">
+          <input type="text" id="search-input" class="search-input" tabindex="0" aria-label="Search ❄️ice-vault" autocomplete="off">
           <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#icon-svg-search"></use></svg></label>
         </div>
         <div id="search-results" class="search-results"></div>
@@ -182,7 +182,7 @@
         
         <h2>Source code</h2>
         <ul>
-          <li><a href="https://github.com/gen-wealth/ice-wallet">gen-wealth/ice-wallet</a></li>
+          <li><a href="https://github.com/gen-wealth/ice-vault">gen-wealth/ice-vault</a></li>
         </ul>
         
 
@@ -202,9 +202,9 @@
 	  
 	  </a></li>
         
-	  <li><a href="../tests/burn_wallet_key.html">
+	  <li><a href="../tests/burn_vault_key.html">
 	  
-	  tests/burn_wallet_key
+	  tests/burn_vault_key
 	  
 	  </a></li>
         
@@ -220,9 +220,9 @@
 	  
 	  </a></li>
         
-	  <li><a href="../tests/create_wallet.html">
+	  <li><a href="../tests/create_vault.html">
 	  
-	  tests/create_wallet
+	  tests/create_vault
 	  
 	  </a></li>
         
@@ -244,9 +244,9 @@
 	  
 	  </a></li>
         
-	  <li><a href="../tests/mint_wallet_key.html">
+	  <li><a href="../tests/mint_vault_key.html">
 	  
-	  tests/mint_wallet_key
+	  tests/mint_vault_key
 	  
 	  </a></li>
         
@@ -274,9 +274,9 @@
 	  
 	  </a></li>
         
-	  <li><a href="../tests/update_wallet.html">
+	  <li><a href="../tests/update_vault.html">
 	  
-	  tests/update_wallet
+	  tests/update_vault
 	  
 	  </a></li>
         
@@ -286,51 +286,51 @@
 	  
 	  </a></li>
         
-	  <li><a href="../wallet/action.html">
+	  <li><a href="../vault/action.html">
 	  
-	  wallet/action
-	  
-	  </a></li>
-        
-	  <li><a href="../wallet/alias.html">
-	  
-	  wallet/alias
+	  <strong>vault/action</strong>
 	  
 	  </a></li>
         
-	  <li><a href="../wallet/constant.html">
+	  <li><a href="../vault/alias.html">
 	  
-	  wallet/constant
-	  
-	  </a></li>
-        
-	  <li><a href="../wallet/control.html">
-	  
-	  <strong>wallet/control</strong>
+	  vault/alias
 	  
 	  </a></li>
         
-	  <li><a href="../wallet/extractor.html">
+	  <li><a href="../vault/constant.html">
 	  
-	  wallet/extractor
-	  
-	  </a></li>
-        
-	  <li><a href="../wallet/locker.html">
-	  
-	  wallet/locker
+	  vault/constant
 	  
 	  </a></li>
         
-	  <li><a href="../wallet/monetization.html">
+	  <li><a href="../vault/control.html">
 	  
-	  wallet/monetization
+	  vault/control
 	  
 	  </a></li>
         
-	  <li><a href="../wallet/token.html">
+	  <li><a href="../vault/extractor.html">
 	  
-	  wallet/token
+	  vault/extractor
+	  
+	  </a></li>
+        
+	  <li><a href="../vault/locker.html">
+	  
+	  vault/locker
+	  
+	  </a></li>
+        
+	  <li><a href="../vault/monetization.html">
+	  
+	  vault/monetization
+	  
+	  </a></li>
+        
+	  <li><a href="../vault/token.html">
+	  
+	  vault/token
 	  
 	  </a></li>
         
@@ -341,7 +341,7 @@
 <h2>Types</h2>
 <ul>
   
-  <li><a href="#Flow">Flow</a></li>
+  <li><a href="#Action">Action</a></li>
   
 </ul>
 
@@ -355,7 +355,7 @@
       <main class="content">
         
 <h1 id="module-name" class="module-name">
-  <a href="#module-name">wallet/control</a>
+  <a href="#module-name">vault/action</a>
 </h1>
 
 
@@ -368,9 +368,9 @@
   
   <div class="member">
     <div class="member-name">
-      <h2 id="Flow">
-        <a href="#Flow">
-	  Flow
+      <h2 id="Action">
+        <a href="#Action">
+	  Action
         </a>
       </h2>
       
@@ -390,7 +390,35 @@
         <li class="constructor-item">
           <div class="constructor-row">
             <svg class="icon icon-box"><use xlink:href="#icon-box"></use></svg>
-            <pre class="constructor-name"><code class="hljs aiken">Continue</code></pre>
+            <pre class="constructor-name"><code class="hljs aiken">CreateVault {
+  name: ByteArray,
+  deadline: PosixTime,
+  reclaimable: PosixTime,
+  fee: Option&lt;SignedFee&gt;,
+}</code></pre>
+          </div>
+	  
+          <div class="constructor-item-docs">
+            <p>[<code>Datum</code>, <code>Redeemer</code>]</p>
+<blockquote>
+<p>As datum, this defines a vault’s metadata.
+As redeemer, this allows vault lock minting.</p>
+<ul>
+<li><code>name</code> is the vault name.</li>
+<li><code>deadline</code> is the time when a pocket key holder is allowed
+to redeem the funds from the corresponding pocket.</li>
+<li><code>reclaimable</code> is the user’s consent whether the unclaimed
+funds may be reclaimed by the platform after a period of
+time not being redeemed by the beneficiaries,
+<ul>
+<li><code>&lt;=-1</code>: Unreclaimable</li>
+<li><code>== 0</code>: Immediately reclaimable after the <code>deadline</code></li>
+<li><code>&gt;= 1</code>: Reclaimable after <code>deadline</code> + <code>reclaimable</code> </li>
+</ul>
+</li>
+</ul>
+</blockquote>
+
           </div>
 	  
         </li>
@@ -398,7 +426,202 @@
         <li class="constructor-item">
           <div class="constructor-row">
             <svg class="icon icon-box"><use xlink:href="#icon-box"></use></svg>
-            <pre class="constructor-name"><code class="hljs aiken">Break</code></pre>
+            <pre class="constructor-name"><code class="hljs aiken">CreatePocket { name: ByteArray, fee: Option&lt;SignedFee&gt; }</code></pre>
+          </div>
+	  
+          <div class="constructor-item-docs">
+            <p>[<code>Datum</code>, <code>Redeemer</code>]</p>
+<blockquote>
+<p>As datum, this defines a pocket’s metadata.
+As redeemer, this allows pocket lock minting.</p>
+<ul>
+<li><code>name</code> is the pocket name.</li>
+</ul>
+</blockquote>
+
+          </div>
+	  
+        </li>
+        
+        <li class="constructor-item">
+          <div class="constructor-row">
+            <svg class="icon icon-box"><use xlink:href="#icon-box"></use></svg>
+            <pre class="constructor-name"><code class="hljs aiken">DeletePocket { pocket_policy: PolicyId }</code></pre>
+          </div>
+	  
+          <div class="constructor-item-docs">
+            <p>[<code>Redeemer</code>]</p>
+<blockquote>
+<p>Used to delete a pocket by its <code>PolicyId</code>
+by consuming the <code>CreatePocket</code> UTxO
+and burning its pocket lock.</p>
+</blockquote>
+
+          </div>
+	  
+        </li>
+        
+        <li class="constructor-item">
+          <div class="constructor-row">
+            <svg class="icon icon-box"><use xlink:href="#icon-box"></use></svg>
+            <pre class="constructor-name"><code class="hljs aiken">DepositFunds { pocket_policy: PolicyId }</code></pre>
+          </div>
+	  
+          <div class="constructor-item-docs">
+            <p>[<code>Datum</code>]</p>
+<blockquote>
+<p>The datum that must be used when depositing funds.</p>
+</blockquote>
+
+          </div>
+	  
+        </li>
+        
+        <li class="constructor-item">
+          <div class="constructor-row">
+            <svg class="icon icon-box"><use xlink:href="#icon-box"></use></svg>
+            <pre class="constructor-name"><code class="hljs aiken">WithdrawFunds { fee: SignedFee }</code></pre>
+          </div>
+	  
+          <div class="constructor-item-docs">
+            <p>[<code>Redeemer</code>]</p>
+<blockquote>
+<p><strong>NOTE</strong>: A UTxO with <code>CreateVault</code>/<code>CreatePocket</code> datum cannot be withdrawn.</p>
+</blockquote>
+
+          </div>
+	  
+        </li>
+        
+        <li class="constructor-item">
+          <div class="constructor-row">
+            <svg class="icon icon-box"><use xlink:href="#icon-box"></use></svg>
+            <pre class="constructor-name"><code class="hljs aiken">RedeemFunds { fee: SignedFee }</code></pre>
+          </div>
+	  
+          <div class="constructor-item-docs">
+            <p>[<code>Redeemer</code>]</p>
+<blockquote>
+<p>An action for a pocket key holder (ie. beneficiary) to redeem funds
+from the corresponding pocket (UTXOs with <code>DepositFunds</code> datum that
+refer to the matching UTxO with <code>CreatePocket</code> datum holding the
+pocket lock)</p>
+</blockquote>
+
+          </div>
+	  
+        </li>
+        
+        <li class="constructor-item">
+          <div class="constructor-row">
+            <svg class="icon icon-box"><use xlink:href="#icon-box"></use></svg>
+            <pre class="constructor-name"><code class="hljs aiken">MintVaultKey { fee: SignedFee }</code></pre>
+          </div>
+	  
+          <div class="constructor-item-docs">
+            <p>[<code>Redeemer</code>]</p>
+<blockquote>
+<p>This allows the original vault creator PKH to mint more vault keys.</p>
+</blockquote>
+
+          </div>
+	  
+        </li>
+        
+        <li class="constructor-item">
+          <div class="constructor-row">
+            <svg class="icon icon-box"><use xlink:href="#icon-box"></use></svg>
+            <pre class="constructor-name"><code class="hljs aiken">MintPocketKey { fee: SignedFee }</code></pre>
+          </div>
+	  
+          <div class="constructor-item-docs">
+            <p>[<code>Redeemer</code>]</p>
+<blockquote>
+<p>This allows a vault key token holder to mint more pocket keys.</p>
+</blockquote>
+
+          </div>
+	  
+        </li>
+        
+        <li class="constructor-item">
+          <div class="constructor-row">
+            <svg class="icon icon-box"><use xlink:href="#icon-box"></use></svg>
+            <pre class="constructor-name"><code class="hljs aiken">UpdateVault { fee: SignedFee }</code></pre>
+          </div>
+	  
+          <div class="constructor-item-docs">
+            <p>[<code>Redeemer</code>]</p>
+<blockquote>
+<p>Used to update the datum of a vault lock UTxO</p>
+</blockquote>
+
+          </div>
+	  
+        </li>
+        
+        <li class="constructor-item">
+          <div class="constructor-row">
+            <svg class="icon icon-box"><use xlink:href="#icon-box"></use></svg>
+            <pre class="constructor-name"><code class="hljs aiken">UpdatePocket { fee: SignedFee }</code></pre>
+          </div>
+	  
+          <div class="constructor-item-docs">
+            <p>[<code>Redeemer</code>]</p>
+<blockquote>
+<p>Used to update the datum of a pocket lock UTxO</p>
+</blockquote>
+
+          </div>
+	  
+        </li>
+        
+        <li class="constructor-item">
+          <div class="constructor-row">
+            <svg class="icon icon-box"><use xlink:href="#icon-box"></use></svg>
+            <pre class="constructor-name"><code class="hljs aiken">BurnVaultKey</code></pre>
+          </div>
+	  
+          <div class="constructor-item-docs">
+            <p>[<code>Redeemer</code>]</p>
+<blockquote>
+<p>Used to burn vault keys free of charge.</p>
+</blockquote>
+
+          </div>
+	  
+        </li>
+        
+        <li class="constructor-item">
+          <div class="constructor-row">
+            <svg class="icon icon-box"><use xlink:href="#icon-box"></use></svg>
+            <pre class="constructor-name"><code class="hljs aiken">BurnPocketKey</code></pre>
+          </div>
+	  
+          <div class="constructor-item-docs">
+            <p>[<code>Redeemer</code>]</p>
+<blockquote>
+<p>Used to burn pocket keys free of charge.</p>
+</blockquote>
+
+          </div>
+	  
+        </li>
+        
+        <li class="constructor-item">
+          <div class="constructor-row">
+            <svg class="icon icon-box"><use xlink:href="#icon-box"></use></svg>
+            <pre class="constructor-name"><code class="hljs aiken">Reward</code></pre>
+          </div>
+	  
+          <div class="constructor-item-docs">
+            <p>[<code>Datum</code>]</p>
+<blockquote>
+<p>Used to hold rewards given by the platform.
+It’s located outside of any pocket, and can
+be withdrawn by a vault key token holder.</p>
+</blockquote>
+
           </div>
 	  
         </li>
@@ -485,8 +708,8 @@
       });
     </script>
     <script src="../js/lunr.min.js?v=1.0.20-alpha"></script>
-    <script src="../js/index.js?v=1699903237"></script>
+    <script src="../js/index.js?v=1700320742"></script>
     <!-- Load the search index using JSONP to avoid CORS issues -->
-    <script src="../search-data.js?v=1699903237"></script>
+    <script src="../search-data.js?v=1700320742"></script>
   </body>
 </html>
