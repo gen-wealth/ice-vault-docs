@@ -349,53 +349,57 @@
 <p><img src="https://genwealth-icevault.web.app/img/Vijay_Verma_-_Ice_Vault.png"
        alt="Vijay Verma"/></p>
 </div><br/>
-<p>Sharing the wallet seed phrase is maybe the first thing that comes to most people’s mind,
-but it involves a huge risk. Anyone who knows your seed phrase will have a full control of
-your wallet! This contract is designed so that you can share your hard earned assets to
-persons, selected by you, only after you passed without compromising security.</p>
-<p>This contract generates a unique vault for each user where you can <em>freeze</em> your funds
-and then it will <em>melt</em> when the time comes, which is after a deadline. As long as you
-interact with the vault, the deadline will be postponed. A person who holds a key
-token will then be able to redeem the funds after the vault has melted.</p>
-<p>With this contract you can:</p>
-<ul>
-<li>Create Vault</li>
-<li>Create Pocket</li>
-<li>Mint Vault Key</li>
-<li>Mint Pocket Key</li>
-<li>Update Vault</li>
-<li>Update Pocket</li>
-<li>Deposit Funds</li>
-<li>Withdraw Funds</li>
-<li>Redeem Funds</li>
-</ul>
+<p>Sharing wallet seed phrase is maybe the first thing that comes to most people’s mind,
+but it involves a huge risk. Anyone who knows your seed phrase will <strong>immediately</strong> have
+a full control of your wallet! This contract is designed so that you can share your hard
+earned assets to persons, selected by you, only after you passed without compromising
+security.</p>
+<p>This contract generates a unique vault for each user where you can <em>freeze</em> your funds and
+then it will <em>melt</em> when the time comes, which is after a deadline. As long as you interact
+with the vault, the deadline will be postponed. A person who holds a key token will then be
+able to redeem the funds after the vault has melted.</p>
+<p>With this contract you can:<br/>
+<code>Create Vault</code>, <code>Create Pocket</code>, <code>Update Vault</code>, <code>Update Pocket</code>, <code>Delete Pocket</code>,<br/>
+<code>Mint Vault Key</code>, <code>Mint Pocket Key</code>, <code>Burn Vault Key</code>, <code>Burn Pocket Key</code>,<br/>
+<code>Deposit Funds</code>, <code>Withdraw Funds</code>, <code>Redeem Funds</code><br/></p>
 <h2>Create Vault</h2>
-<p>Mints <code>VaultLock</code> and optionally <code>VaultKey</code>s, a new address will be generated.
-Send <code>VaultLock</code> to that newly generated address. Keep <code>VaultKey</code> tokens in your wallet,
-and/or send them to your other wallets. You will need to show the token when doing other
-actions later.</p>
+<p>Mints <code>VaultLock</code> and <code>VaultKey</code>, a new address will be generated. Send <code>VaultLock</code> to that
+newly generated address. Keep <code>VaultKey</code> in your wallet, and/or send them to your other wallets.
+You will need to show the token when doing other actions later.</p>
 <h2>Create Pocket</h2>
-<p><strong>TODO</strong>: Explain Pocket!</p>
-<h2>Mint Vault Key</h2>
-<p><strong>TODO</strong>: Explain Vault Key in more detail!</p>
-<h2>Mint Pocket Key</h2>
-<p><strong>TODO</strong>: Explain Pocket Key in more detail!</p>
+<p>TODO: Explain Pocket in a clear manner!</p>
 <h2>Update Vault</h2>
 <p>Show the <code>VaultKey</code> token to update the vault metadata.</p>
 <h2>Update Pocket</h2>
-<p>Show the <code>VaultKey</code> token to update a pocket metadata.</p>
+<p>Show the <code>VaultKey</code> token to update a pocket’s metadata.</p>
+<h2>Delete Pocket</h2>
+<p>Deletes a pocket by burning its <code>PocketLock</code>, you will get the minimum ADA locked back.</p>
+<h2>Mint Vault Key</h2>
+<p>TODO: Explain Vault Key in more detail!</p>
+<h2>Mint Pocket Key</h2>
+<p>TODO: Explain Pocket Key in more detail!</p>
+<h2>Burn Vault Key</h2>
+<p>The opposite of <code>Mint Vault Key</code></p>
+<h2>Burn Pocket Key</h2>
+<p>The opposite of <code>Mint Pocket Key</code></p>
 <h2>Deposit Funds</h2>
-<p>Deposit more assets to a pocket. Don’t forget to include an inline datum
-that points to a valid <code>PocketLock</code> Policy ID.</p>
+<p>Deposit more assets to a pocket. A valid <code>PocketLock</code> Policy ID must be set as the inline datum,
+otherwise it will become orphaned (it still can be withdrawn though)</p>
+<h2>Withdraw Funds</h2>
+<p>This action allows a <code>VaultKey</code> token holder to withdraw from the vault at any time.</p>
 <h2>Redeem Funds</h2>
-<p>Redeem assets from a certain pocket when the deadline has passed by showing the
-corresponding <code>PocketKey</code> token.</p>
+<p>Redeem assets from a certain pocket when the deadline has passed by showing the corresponding
+<code>PocketKey</code> token.</p>
 <hr />
 <h3>Vault Address Sample</h3>
+<p>vMiletsone#1:</p>
 <pre><code>addr_test1wr2wjfqxkp4x836mal07ynm2cswz056d2ekf6lexarfkqgqwp48xa
 </code></pre>
-<p>View it in action on <a href="https://preview.cexplorer.io/address/addr_test1wr2wjfqxkp4x836mal07ynm2cswz056d2ekf6lexarfkqgqwp48xa">CExplorer</a>.</p>
+<p>TODO: vMilestone#latest</p>
+<p>View it in action on
+<a href="https://preview.cexplorer.io/address/addr_test1wr2wjfqxkp4x836mal07ynm2cswz056d2ekf6lexarfkqgqwp48xa">CExplorer</a>.</p>
 <h4>Timeline</h4>
+<p>vMiletsone#1</p>
 <ul>
 <li>
 <p><strong>Create Vault</strong><br/>
@@ -406,41 +410,52 @@ corresponding <code>PocketKey</code> token.</p>
 <code>https://preview.cexplorer.io/tx/e246e12843980a11adc04d8dc455977476ad050f8af62e44484b21c4f0540fb5</code></p>
 </li>
 <li>
-<p><strong>Mint Vault Key</strong><br/>
-<code>https://preview.cexplorer.io/tx/30dcaa7269242405288dfb80e8f9eadcdbcff6cd37301105968c7ed872d932b9</code></p>
-</li>
-<li>
-<p><strong>Mint Pocket Key</strong><br/>
-<code>https://preview.cexplorer.io/tx/49c7b4d36e39c6c131ab86c8bfd2eda129ae7dde262459dfe0e6728bf7afa87a</code></p>
+<p><strong>Create another Pocket</strong><br/></p>
 </li>
 <li>
 <p><strong>Update Vault</strong><br/>
 <code>https://preview.cexplorer.io/tx/b27d124d579c58d84017527d1065638737d35cc10678ab413557f734f5e93da2</code></p>
 </li>
 <li>
+<p><strong>Mint Vault Key</strong><br/>
+<code>https://preview.cexplorer.io/tx/30dcaa7269242405288dfb80e8f9eadcdbcff6cd37301105968c7ed872d932b9</code>
+NOTE: By minting a new key, the metadata will be updated accordingly.</p>
+</li>
+<li>
+<p><strong>Burn Vault Key</strong><br/></p>
+</li>
+<li>
+<p><strong>Deposit Funds</strong><br/>
+<code>https://preview.cexplorer.io/tx/755c557a04b662d5878e5fcd82d701e1312b83a579d8a74523223ec756b28ea5</code></p>
+</li>
+<li>
+<p><strong>Deposit more Funds</strong><br/>
+NOTE: The offchain must defrag pocket UTXOs into one.</p>
+</li>
+<li>
+<p><strong>Mint Pocket Key</strong><br/>
+<code>https://preview.cexplorer.io/tx/49c7b4d36e39c6c131ab86c8bfd2eda129ae7dde262459dfe0e6728bf7afa87a</code></p>
+</li>
+<li>
 <p><strong>Update Pocket</strong><br/>
 <code>https://preview.cexplorer.io/tx/7f90cb8521fa92dad188f9b9643acae45ac2d0fc50329d6690aaf47578714164</code></p>
 </li>
 <li>
-<p><strong>Deposit Funds</strong><br/>
-<code>https://preview.cexplorer.io/tx/755c557a04b662d5878e5fcd82d701e1312b83a579d8a74523223ec756b28ea5</code>
-Deposit with 94.3% mem usage:
-https://preview.cexplorer.io/tx/10fecb2b1ddd19bdb67c5aafd9135fefb3f4e09515c171778a7034128eaad980#data</p>
+<p><strong>Mint another Pocket Key</strong><br/>
+NOTE: By minting a new key, the metadata will be updated accordingly.</p>
 </li>
 <li>
-<p><strong>Withdraw Funds</strong><br/>
-<code>https://preview.cexplorer.io/tx/9936376f9df0e9e6ed4f67bd7df5448afa0c71db18b611b84b54248dff2f00cc</code></p>
-</li>
-</ul>
-<p>Redeem a pocket containing 6 distinct tokens:
-https://preview.cexplorer.io/tx/c4b755b7fd513f4736693122cd7aa37c6e8a451d3bda155a404893b1f38b0648#data</p>
-<ul>
-<li>
-<p><strong>Redeem Funds</strong><br/>
-<code>https://preview.cexplorer.io/tx/2f73c854c2861cbf34283310500dc90729a8bb666f55dd8ef20d32e5b66cbd20</code></p>
+<p><strong>Send a Pocket Key to a Beneficiary</strong><br/>
+NOTE: This can actually be done during minting, to send the key to a beneficiary directly.</p>
 </li>
 <li>
-<p><strong>Share Access</strong><br/>
+<p><strong>Burn Pocket Key</strong><br/></p>
+</li>
+<li>
+<p><strong>Delete Pocket</strong><br/></p>
+</li>
+<li>
+<p><strong>Share Vault Access</strong><br/>
 <code>https://preview.cexplorer.io/tx/946e440eca14ca2336064bdad6235ec7f11e627d49db8664152f2657ebf0483e</code></p>
 </li>
 <li>
@@ -450,6 +465,14 @@ https://preview.cexplorer.io/tx/c4b755b7fd513f4736693122cd7aa37c6e8a451d3bda155a
 <li>
 <p><strong>Update Pocket</strong> (by another address)<br/>
 <code>https://preview.cexplorer.io/tx/567b92980f97de7401f134f863ebc185258b291cc405322e7af100c5fa16b1ac</code></p>
+</li>
+<li>
+<p><strong>Withdraw Funds</strong><br/>
+<code>https://preview.cexplorer.io/tx/9936376f9df0e9e6ed4f67bd7df5448afa0c71db18b611b84b54248dff2f00cc</code></p>
+</li>
+<li>
+<p><strong>Redeem Funds</strong><br/>
+<code>https://preview.cexplorer.io/tx/2f73c854c2861cbf34283310500dc90729a8bb666f55dd8ef20d32e5b66cbd20</code></p>
 </li>
 </ul>
 <hr />
@@ -529,8 +552,8 @@ https://preview.cexplorer.io/tx/c4b755b7fd513f4736693122cd7aa37c6e8a451d3bda155a
       });
     </script>
     <script src="./js/lunr.min.js?v=1.0.20-alpha"></script>
-    <script src="./js/index.js?v=1700320742"></script>
+    <script src="./js/index.js?v=1700654501"></script>
     <!-- Load the search index using JSONP to avoid CORS issues -->
-    <script src="./search-data.js?v=1700320742"></script>
+    <script src="./search-data.js?v=1700654501"></script>
   </body>
 </html>
