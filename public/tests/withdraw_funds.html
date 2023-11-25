@@ -351,7 +351,7 @@
   <a href="#module-name">tests/withdraw_funds</a>
 </h1>
 <pre><code>┍━ tests/withdraw_funds ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-│ PASS [mem:  6304891, cpu: 3758618849] withdraw_funds_positive_case
+│ PASS [mem:  6303991, cpu: 3758411849] withdraw_funds_positive_case
 │ ↳ Positive Case
 │ ↳ ScriptContext: &quot;d8799fd8799f9fd8799fd8799fd8799f4d506f636b65745f547848617368ff00ffd8799fd8799fd87a9f4d5661756c745f41646472657373ffd87a80ffa140a1401a001e8480d87b9fd87c9f4d506f636b65745f506f6c696379ffffd87a80ffffff9fd8799fd8799fd8799f4f5661756c744b65795f547848617368ff00ffd8799fd8799fd8799f515661756c745f43726561746f725f504b48ffd87a80ffa240a1401a001e84804c5661756c745f506f6c696379a1495661756c745f4b657901d87980d87a80ffffff80a140a1401a001e8480a140a1400080a0d8799fd8799fd87b80d87a80ffd8799fd87980d87a80ffff9f515661756c745f43726561746f725f504b48ffa0a0d8799f40ffffd87a9fd8799fd8799f4d506f636b65745f547848617368ff00ffffff&quot;
 │ ↳ spend.vault_policy: &quot;4c5661756c745f506f6c696379&quot;
@@ -360,7 +360,7 @@
 │ ↳ spend.redeemer: &quot;d87d9fd8799fd8799fd8799fd8799f5820123456789a123456789b123456789c123456789d123456789e123456789f1234ff00ff07581c78418d881d5105846c9157f20ebf5c64f05aa7bed58bb9ec07a73c6d404000ff5840693f2af05c3420292dfd4e81c45f01af9eae0afb7810994b27c098089399a019bd90917576c2fa9017ac0d3266abda7dfa7d2c180db1fb2462dce23b7d8d7101ffff&quot;
 │ ↳ Spending Action / Redeemer: WithdrawFunds
 │ ↳ Withdrawable UTxO Datum: &quot;d87c9f4d506f636b65745f506f6c696379ff&quot;
-│ PASS [mem:  6331348, cpu: 3778247905] withdraw_funds_negative_case_invalid_vault_key_shown
+│ PASS [mem:  6330448, cpu: 3778040905] withdraw_funds_negative_case_invalid_vault_key_shown
 │ ↳ Negative Case: INVALID VAULT KEY SHOWN
 │ ↳ ScriptContext: &quot;d8799fd8799f9fd8799fd8799fd8799f4d506f636b65745f547848617368ff00ffd8799fd8799fd87a9f4d5661756c745f41646472657373ffd87a80ffa140a1401a001e8480d87b9fd87c9f4d506f636b65745f506f6c696379ffffd87a80ffffff9fd8799fd8799fd8799f4f5661756c744b65795f547848617368ff00ffd8799fd8799fd8799f515661756c745f43726561746f725f504b48ffd87a80ffa240a1401a001e84805146616b655f5661756c745f506f6c696379a1495661756c745f4b657901d87980d87a80ffffff80a140a1401a001e8480a140a1400080a0d8799fd8799fd87b80d87a80ffd8799fd87980d87a80ffff9f515661756c745f43726561746f725f504b48ffa0a0d8799f40ffffd87a9fd8799fd8799f4d506f636b65745f547848617368ff00ffffff&quot;
 │ ↳ spend.vault_policy: &quot;4c5661756c745f506f6c696379&quot;
@@ -370,7 +370,7 @@
 │ ↳ Spending Action / Redeemer: WithdrawFunds
 │ ↳ Withdrawable UTxO Datum: &quot;d87c9f4d506f636b65745f506f6c696379ff&quot;
 │ ↳ signed_by_key_token_holder ? False
-│ PASS [mem:  6048700, cpu: 3609754975] withdraw_funds_negative_case_does_not_show_vault_key
+│ PASS [mem:  6047800, cpu: 3609547975] withdraw_funds_negative_case_does_not_show_vault_key
 │ ↳ Negative Case: DOES NOT SHOW VAULT KEY
 │ ↳ ScriptContext: &quot;d8799fd8799f9fd8799fd8799fd8799f4d506f636b65745f547848617368ff00ffd8799fd8799fd87a9f4d5661756c745f41646472657373ffd87a80ffa140a1401a001e8480d87b9fd87c9f4d506f636b65745f506f6c696379ffffd87a80ffffff9fd8799fd8799fd8799f4f5661756c744b65795f547848617368ff00ffd8799fd8799fd8799f515661756c745f43726561746f725f504b48ffd87a80ffa140a1401a001e8480d87980d87a80ffffff80a140a1401a001e8480a140a1400080a0d8799fd8799fd87b80d87a80ffd8799fd87980d87a80ffff9f515661756c745f43726561746f725f504b48ffa0a0d8799f40ffffd87a9fd8799fd8799f4d506f636b65745f547848617368ff00ffffff&quot;
 │ ↳ spend.vault_policy: &quot;4c5661756c745f506f6c696379&quot;
@@ -380,7 +380,7 @@
 │ ↳ Spending Action / Redeemer: WithdrawFunds
 │ ↳ Withdrawable UTxO Datum: &quot;d87c9f4d506f636b65745f506f6c696379ff&quot;
 │ ↳ signed_by_key_token_holder ? False
-│ PASS [mem:  5234290, cpu: 3139423470] withdraw_funds_negative_case_does_not_refer_to_vault_key
+│ PASS [mem:  5233390, cpu: 3139216470] withdraw_funds_negative_case_does_not_refer_to_vault_key
 │ ↳ Negative Case: DOES NOT REFER TO VAULT KEY
 │ ↳ ScriptContext: &quot;d8799fd8799f9fd8799fd8799fd8799f4d506f636b65745f547848617368ff00ffd8799fd8799fd87a9f4d5661756c745f41646472657373ffd87a80ffa140a1401a001e8480d87b9fd87c9f4d506f636b65745f506f6c696379ffffd87a80ffffff8080a140a1401a001e8480a140a1400080a0d8799fd8799fd87b80d87a80ffd8799fd87980d87a80ffff9f515661756c745f43726561746f725f504b48ffa0a0d8799f40ffffd87a9fd8799fd8799f4d506f636b65745f547848617368ff00ffffff&quot;
 │ ↳ spend.vault_policy: &quot;4c5661756c745f506f6c696379&quot;
@@ -390,7 +390,7 @@
 │ ↳ Spending Action / Redeemer: WithdrawFunds
 │ ↳ Withdrawable UTxO Datum: &quot;d87c9f4d506f636b65745f506f6c696379ff&quot;
 │ ↳ signed_by_key_token_holder ? False
-│ PASS [mem:  6082252, cpu: 3639774809] withdraw_funds_negative_case_does_not_sign_the_txn
+│ PASS [mem:  6081352, cpu: 3639567809] withdraw_funds_negative_case_does_not_sign_the_txn
 │ ↳ Negative Case: DOES NOT SIGN THE TXN
 │ ↳ ScriptContext: &quot;d8799fd8799f9fd8799fd8799fd8799f4d506f636b65745f547848617368ff00ffd8799fd8799fd87a9f4d5661756c745f41646472657373ffd87a80ffa140a1401a001e8480d87b9fd87c9f4d506f636b65745f506f6c696379ffffd87a80ffffff9fd8799fd8799fd8799f4f5661756c744b65795f547848617368ff00ffd8799fd8799fd8799f515661756c745f43726561746f725f504b48ffd87a80ffa240a1401a001e84804c5661756c745f506f6c696379a1495661756c745f4b657901d87980d87a80ffffff80a140a1401a001e8480a140a1400080a0d8799fd8799fd87b80d87a80ffd8799fd87980d87a80ffff80a0a0d8799f40ffffd87a9fd8799fd8799f4d506f636b65745f547848617368ff00ffffff&quot;
 │ ↳ spend.vault_policy: &quot;4c5661756c745f506f6c696379&quot;
@@ -480,8 +480,8 @@
       });
     </script>
     <script src="../js/lunr.min.js?v=1.0.20-alpha"></script>
-    <script src="../js/index.js?v=1700654501"></script>
+    <script src="../js/index.js?v=1700925103"></script>
     <!-- Load the search index using JSONP to avoid CORS issues -->
-    <script src="../search-data.js?v=1700654501"></script>
+    <script src="../search-data.js?v=1700925103"></script>
   </body>
 </html>
