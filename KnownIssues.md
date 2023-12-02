@@ -1,0 +1,2 @@
+- Deposit funds must wait for the previous one to finalize (eg. balance is shown correctly on the UI). The offchain needs to check whether there's still an on-going deposit to a particular pocket before allowing another deposit to the **same** pocket.
+- The offchain needs to filter out UTXOs submitted by non-authorized parties (ie. check whether a UTxO was submitted by a valid key holder)
