@@ -1,2 +1,3 @@
 - Deposit funds must wait for the previous one to finalize (eg. balance is shown correctly on the UI). The offchain needs to check whether there's still an on-going deposit to a particular pocket before allowing another deposit to the **same** pocket.
 - The offchain needs to filter out UTXOs submitted by non-authorized parties (ie. check whether a UTxO was submitted by a valid key holder)
+- When deleting a non-empty pocket, the funds are not automatically withdrawn. The UTxO is not lost and is actually withdrawable, but there's no UI for that at the moment.
