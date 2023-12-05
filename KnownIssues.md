@@ -2,4 +2,3 @@
 - The offchain needs to filter out UTXOs submitted by non-authorized parties (ie. check whether a UTxO was submitted by a valid key holder)
 - Can't delete a pocket when there's no deposited funds at all.
 - When deleting a non-empty pocket, the funds are not automatically withdrawn. The UTxO is not lost and is actually withdrawable, but there's no UI for that at the moment.
-- The frontend still attempts to display a deleted pocket when there's a pocket key refering to that deleted pocket. Resulting in an error.
